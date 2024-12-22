@@ -10,23 +10,20 @@ body {
 
 /* Хедер */
 header {
-    background-color: #FFFFFF; /* Белый фон */
+    background-color: #F8F8F8;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
-header h1 {
-    font-size: 1.5rem;
-    color: #4A4A4A; /* Серо-синий */
-    margin: 0;
-}
+
 
 header img {
-    height: 50px;
+    height: 40px;
     width: auto;
+    margin-left: 15px;
 }
 
 /* Меню навигации в хедере */
