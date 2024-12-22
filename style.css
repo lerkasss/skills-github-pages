@@ -1,39 +1,43 @@
 /* Общие стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'M PLUS 1p', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FDF6E3; /* Мягкий пастельный бежевый */
+    background-color: #F8F8F8; /* Светло-серый */
     color: #333333; /* Темно-серый текст */
     line-height: 1.6;
 }
 
 /* Хедер */
 header {
-    background-color: #EAF6F6; /* Светлый серо-голубой */
-    text-align: center;
-    padding: 20px 10px;
+    background-color: #FFFFFF; /* Белый фон */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2rem;
-    margin: 0;
+    font-size: 1.5rem;
     color: #4A4A4A; /* Серо-синий */
+    margin: 0;
 }
 
-/* Меню навигации */
+header img {
+    height: 50px;
+    width: auto;
+}
+
+/* Меню навигации в хедере */
 nav {
     display: flex;
-    justify-content: center;
-    background-color: #B2D4E6; /* Пастельный голубой */
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 15px;
 }
 
 nav a {
     text-decoration: none;
     color: #333333;
-    margin: 0 15px;
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 5px;
@@ -49,11 +53,10 @@ nav a:hover {
 section {
     padding: 20px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     background: #FFFFFF; /* Белый фон секций */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
 /* Стили для кнопки */
@@ -79,7 +82,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #EAF6F6; /* Светлый серо-голубой */
+    background-color: #FFFFFF; /* Белый фон */
     margin-top: 20px;
     color: #333333;
     font-size: 0.9rem;
