@@ -19,8 +19,8 @@
             <a href="#services">Услуги</a>
             <a href="#faq">FAQ</a>
             <a href="#reviews">Отзывы</a>
-            <a href="#contact">Контакты</a>
-            <button class="calculate-button">Рассчитать стоимость</button>
+            <a href="#contact">Контакты</a>   
+            <button class="calculate-button" onclick="openModal()">Рассчитать стоимость</button>
             <div class="language-switcher">
                 <a href="#" class="current-lang" onclick="toggleDropdown(event)">RU</a>
                     <div class="dropdown" id="languageDropdown">
@@ -30,11 +30,35 @@
         </nav>
     </header>
 
-    <!-- Секция "Услуги" -->
-    <section id="services">
-        <h2>Услуги</h2>
-        
-    </section>
+    <!-- Секция "Интро" -->
+    <section id="intro">
+    <div class="content">
+        <div class="text">
+            
+            <p>Услуги профессионального перевода и языковой поддержки для иммиграции, судебных дел, бизнеса и повседневных задач.</p>
+            <p><strong>Отправьте материал для бесплатной оценки стоимости прямо сейчас!</strong></p>
+        </div>
+        <button class="calculate-button" onclick="openModal()">Рассчитать стоимость</button>
+
+        <div class="image">
+            <img src="your-image.svg" alt="Translation services illustration">
+        </div>
+    </div>
+</section>
+<!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Рассчитать стоимость</h2>
+            <form id="costForm" method="post" enctype="multipart/form-data" action="mailto:your-email@example.com">
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="file">Прикрепить файл:</label>
+                <input type="file" id="file" name="file" required>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Секция "FAQ" -->
     <section id="faq">
@@ -63,5 +87,6 @@
     <footer>
         <p>© 2024 Валерия Солдатченкова. Все права защищены.</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
