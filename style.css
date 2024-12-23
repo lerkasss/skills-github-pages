@@ -18,8 +18,6 @@ header {
 
 }
 
-
-
 header img {
     height: 40px;
     width: auto;
@@ -43,6 +41,46 @@ nav a {
 
 nav a:hover {
     color: black;
+}
+
+.language-switcher {
+    position: relative;
+    display: inline-block;
+}
+
+.current-lang {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.current-lang:hover {
+    background-color: #F0F0F0;
+}
+
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position below the current-lang */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown a:hover {
+    background-color: #F0F0F0;
 }
 
 /* Основной контент */
