@@ -21,10 +21,10 @@
             <a href="#reviews">Отзывы</a>
             <a href="#contact">Контакты</a>
             <button class="calculate-button">Рассчитать стоимость</button>
-            <div class="language-switcher" onclick="toggleDropdown()">
-                <a href="#" class="current-lang">RU</a>
-                    <div class="dropdown">
-                    <a href="?lang=en">EN</a>
+            <div class="language-switcher">
+                <a href="#" class="current-lang" onclick="toggleDropdown(event)">RU</a>
+                    <div class="dropdown" id="languageDropdown">
+                <a href="?lang=en">EN</a>
                     </div>
             </div>
         </nav>
@@ -33,11 +33,7 @@
     <!-- Секция "Услуги" -->
     <section id="services">
         <h2>Услуги</h2>
-        <ul>
-            <li>Перевод документов</li>
-            <li>Локализация веб-сайтов</li>
-            <li>Транскрибация и перевод аудио</li>
-        </ul>
+        
     </section>
 
     <!-- Секция "FAQ" -->
