@@ -46,44 +46,44 @@ nav a:hover {
 }
 
 .language-switcher {
-    position: relative;
     display: inline-block;
-    margin-top: 10px;
+    position: relative;
 }
 
-.current-lang {
+.language-switcher .current-lang {
     text-decoration: none;
-    color: #333;
     cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px;
 }
 
-.current-lang:hover {
-    background-color: #F0F0F0;
-}
-
-.dropdown {
-    display: none; /* Hidden by default */
+.language-switcher .dropdown {
+    display: none;
     position: absolute;
-    top: 100%; /* Position below the current-lang */
+    top: 100%;
     left: 0;
     background-color: white;
-    
-    border-radius: 5px;
-    z-index: 100;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
 }
 
-.dropdown a {
-    text-decoration: none;
-    color: #333;
-    padding: 8px 12px;
+.language-switcher.active .dropdown {
     display: block;
-    transition: background-color 0.2s ease;
 }
 
-.dropdown a:hover {
-    background-color: #F0F0F0;
+.language-switcher .dropdown li {
+    padding: 5px 10px;
+}
+
+.language-switcher .dropdown li a {
+    text-decoration: none;
+    color: black;
+}
+
+.language-switcher .dropdown li a:hover {
+    background-color: #f0f0f0;
 }
 
 /* Основной контент */
