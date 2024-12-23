@@ -1,4 +1,7 @@
 // Toggle dropdown for language switcher
+
+console.log("The script is working!");
+
 function toggleDropdown(event) {
     event.preventDefault();
     const dropdown = document.getElementById('languageDropdown');
