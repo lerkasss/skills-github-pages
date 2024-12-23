@@ -42,8 +42,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #A8D5BA; /* Нежный зеленый */
-    color: white;
+    color: black;
 }
 
 /* Основной контент */
@@ -53,22 +52,23 @@ section {
     margin: 20px auto;
     background: #FFFFFF; /* Белый фон секций */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Стили для кнопки */
 button {
     display: block;
-    margin: 20px auto;
-    background-color: #A8D5BA; /* Нежный зеленый */
+   
+    background-color: #404040;
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: 40px;
 }
 
 button:hover {
