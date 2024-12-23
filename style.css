@@ -93,6 +93,11 @@ nav a:hover {
 
 
 /* Основной контейнер */
+/* Добавить стили, если нужно изменить дефолтные настройки Bootstrap */
+.container {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
 
 .grid-container {
     display: grid;
