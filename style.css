@@ -94,19 +94,19 @@ nav a:hover {
 
 /* Основной контент */
 #intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 40px;
-    background-color: #f9f9f9; /* Опционально, чтобы отделить секцию визуально */
 }
 
 #intro .content {
-    display: flex;
-    flex-wrap: wrap; /* Для адаптивности */
     max-width: 1200px; /* Центрирует контент */
     margin: 0 auto;
+}
+
+#intro .row {
+    display: flex;
+    flex-wrap: wrap; /* Для адаптивности */
     gap: 20px; /* Расстояние между текстом и изображением */
+    justify-content: space-between; /* Равномерное распределение */
 }
 
 #intro .text {
@@ -119,7 +119,7 @@ nav a:hover {
 #intro .text p {
     font-size: 1.2rem;
     color: #404040;
-    margin: 0; /* Убирает лишние отступы */
+    margin: 0;
 }
 
 #intro .image {
@@ -141,7 +141,7 @@ button {
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    padding: 10px 20px; /* Пропорциональные отступы */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -151,6 +151,19 @@ button {
 button:hover {
     background-color: #000;
 }
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    #intro .row {
+        flex-direction: column; /* Переключение на вертикальную раскладку */
+    }
+
+    #intro .text,
+    #intro .image {
+        flex: 1 1 100%;
+    }
+}
+
 
 
 /* Футер */
