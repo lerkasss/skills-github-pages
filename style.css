@@ -98,29 +98,29 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 40px;
-  
+    background-color: #f9f9f9; /* Опционально, чтобы отделить секцию визуально */
 }
 
 #intro .content {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    flex-wrap: wrap; /* Для адаптивности */
+    max-width: 1200px; /* Центрирует контент */
     margin: 0 auto;
-    gap: 20px;
+    gap: 20px; /* Расстояние между текстом и изображением */
 }
 
 #intro .text {
     flex: 1 1 50%; /* Задает половину секции для текста */
+    display: flex;
+    flex-direction: column; /* Кнопка расположена под текстом */
+    gap: 20px;
 }
-
-
 
 #intro .text p {
     font-size: 1.2rem;
     color: #404040;
-    margin-bottom: 20px;
+    margin: 0; /* Убирает лишние отступы */
 }
-
 
 #intro .image {
     flex: 1 1 50%; /* Задает половину секции для изображения */
@@ -134,26 +134,24 @@ nav a:hover {
     height: auto;
 }
 
-
 /* Стили для кнопки */
 button {
     display: block;
-   
     background-color: #404040;
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 20px; /* Пропорциональные отступы */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    height: 40px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #black; 
+    background-color: #000;
 }
+
 
 /* Футер */
 footer {
