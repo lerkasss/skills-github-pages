@@ -5,8 +5,8 @@ console.log("The script is working!");
 function toggleDropdown(event) {
     console.log("Dropdown toggled");
     event.preventDefault();
-    const dropdown = document.getElementById('languageDropdown');
-    dropdown.classList.toggle('show');
+    const switcher = event.target.closest('.language-switcher');
+    switcher.classList.toggle('active');
 }
 
 // Open modal
