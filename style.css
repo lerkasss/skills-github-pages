@@ -92,51 +92,43 @@ nav a:hover {
 }
 
 
-/* Основной контент */
-#intro {
-    padding: 40px;
-}
-
-#intro .content {
-    max-width: 1200px; /* Центрирует контент */
+/* Основной контейнер */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
+    gap: 20px; /* Расстояние между колонками */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
 }
 
-#intro .row {
+.grid-item.text {
     display: flex;
-    flex-wrap: wrap; /* Для адаптивности */
-    gap: 20px; /* Расстояние между текстом и изображением */
-    justify-content: space-between; /* Равномерное распределение */
-}
-
-#intro .text {
-    flex: 1 1 50%; /* Задает половину секции для текста */
-    display: flex;
-    flex-direction: column; /* Кнопка расположена под текстом */
+    flex-direction: column; /* Расположить текст и кнопку вертикально */
     gap: 20px;
 }
 
-#intro .text p {
+.grid-item.text p {
     font-size: 1.2rem;
     color: #404040;
     margin: 0;
 }
 
-#intro .image {
-    flex: 1 1 50%; /* Задает половину секции для изображения */
+.grid-item.image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#intro .image img {
+.grid-item.image img {
     max-width: 100%;
     height: auto;
 }
 
 /* Стили для кнопки */
 button {
-    display: block;
     background-color: #404040;
     color: white;
     font-size: 1rem;
@@ -152,19 +144,12 @@ button:hover {
     background-color: #000;
 }
 
-/* Мобильная версия */
+/* Адаптивность */
 @media (max-width: 768px) {
-    #intro .row {
-        flex-direction: column; /* Переключение на вертикальную раскладку */
-    }
-
-    #intro .text,
-    #intro .image {
-        flex: 1 1 100%;
+    .grid-container {
+        grid-template-columns: 1fr; /* Одна колонка на узких экранах */
     }
 }
-
-
 
 /* Футер */
 footer {
