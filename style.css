@@ -94,10 +94,6 @@ nav a:hover {
 
 /* Основной контейнер */
 
-.container {
-    padding: 40px;
-    background-color: #f9f9f9;
-}
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
