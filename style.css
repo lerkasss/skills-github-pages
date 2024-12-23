@@ -22,7 +22,6 @@ header img {
     height: 40px;
     width: auto;
     margin-left: 15px;
-    margin-top: 10px;
 }
 
 /* Меню навигации в хедере */
@@ -30,6 +29,7 @@ nav {
     display: flex;
     gap: 15px;
     margin-top: 10px;
+    margin-right: 15px;
 }
 
 nav a {
@@ -49,6 +49,7 @@ nav a:hover {
 .language-switcher {
     display: inline-block; /* Для горизонтального расположения */
     position: relative;    /* Для абсолютного позиционирования EN */
+    padding-top: 10px;
 }
 
 /* Ссылка на текущий язык */
@@ -62,12 +63,12 @@ nav a:hover {
 /* Скрытие выпадающего списка по умолчанию */
 .language-switcher .dropdown {
     display: none;        /* Скрыть изначально */
-    position: absolute;   /* Абсолютное позиционирование */
-    top: 100%;            /* Появление прямо под RU */
-    left: 0;              /* Без смещения вбок */
-    list-style: none;     /* Убрать маркеры списка */
+    position: absolute;
+    top: 90%;
+    left: 0;
+    list-style: none;
     margin: 0;
-    padding: 0;
+    padding-left: 5px;
 }
 
 /* Элементы выпадающего списка */
