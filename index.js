@@ -1,18 +1,26 @@
+// Toggle dropdown for language switcher
 function toggleDropdown(event) {
-    event.preventDefault(); // Prevent the default link behavior
+    event.preventDefault();
     const dropdown = document.getElementById('languageDropdown');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
+    dropdown.classList.toggle('show');
 }
 
-// Close dropdown when clicking outside
-document.addEventListener('click', function (event) {
-    const dropdown = document.getElementById('languageDropdown');
-    const switcher = document.querySelector('.language-switcher');
-    if (!switcher.contains(event.target)) {
-        dropdown.style.display = 'none';
+// Open modal
+function openModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'block';
+}
+
+// Close modal
+function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+}
+
+// Close modal if user clicks outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
     }
-});
+};
