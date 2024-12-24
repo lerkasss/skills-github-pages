@@ -97,7 +97,10 @@ nav a:hover {
 .container {
     background-color: #f9f9f9;
 }
-
+.limited-width {
+    max-width: 500px; 
+    margin: 0 auto; 
+}
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две колонки одинаковой ширины */
