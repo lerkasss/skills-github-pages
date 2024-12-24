@@ -100,7 +100,8 @@ nav a:hover {
 .text-justify {
     text-align: justify;
     width: 100%; /* Убедитесь, что текст занимает всю ширину */
-    margin-bottom: 30px;
+    max-width: 450px;
+    margin-bottom: 40px;
 }
 .grid-container {
     display: grid;
