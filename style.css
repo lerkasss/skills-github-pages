@@ -102,6 +102,7 @@ nav a:hover {
     width: 100%; /* Убедитесь, что текст занимает всю ширину */
     max-width: 450px;
     margin-bottom: 40px;
+    margin-left: 30px;
 }
 .grid-container {
     display: grid;
