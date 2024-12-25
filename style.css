@@ -139,28 +139,24 @@ nav a:hover {
 }
 
 /* features */
+#features .row {
+    margin: 0; /* Remove default margins from the row */
+    gap: 0; /* Ensure no additional space between columns */
+}
+
 #features .feature-box {
-    margin: 0 20px; /* Отступ между колонками */
-    position: relative;
+    padding: 0; /* Remove any internal padding */
+    margin: 0; /* Remove extra margin between boxes */
+    border-right: 2px solid black; /* Add the separator line */
+}
+
+#features .feature-box:last-child {
+    border-right: none; /* Remove the line for the last box */
 }
 
 #features .feature-box .vertical-line {
-    position: absolute;
-    right: 0; /* Линия точно по правому краю */
-    top: 0;
-    height: 80%;
-    width: 2px;
-    background-color: black;
+    display: none; /* Remove the redundant vertical-line div */
 }
-
-#features .feature-box:last-child .vertical-line {
-    display: none; /* Убираем линию у последней колонки */
-}
-
-#features .row {
-    gap: 40px; /* Гарантирует отступы между колонками */
-}
-
 
 /* Стили для кнопки */
 button {
