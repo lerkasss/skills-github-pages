@@ -158,6 +158,11 @@ nav a:hover {
     display: none; /* Remove the redundant vertical-line div */
 }
 
+#features .col-md-3 {
+    flex: 0 0 33.3333%; /* Force each column to take one-third of the width */
+    max-width: 33.3333%;
+}
+
 /* Стили для кнопки */
 button {
     background-color: #404040;
