@@ -161,6 +161,12 @@ nav a:hover {
 #features .col-md-3 {
     flex: 0 0 30%;
 }
+/*services*/
+h2 {
+    font-family: 'Mplus 1p', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+}
 
 /* Стили для кнопки */
 button {
