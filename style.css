@@ -138,6 +138,25 @@ nav a:hover {
     height: auto;
 }
 
+/* features */
+#features .feature-box {
+    margin: 0 20px; /* Расстояние между колонками (итого 40px) */
+    position: relative; /* Для абсолютного позиционирования линии */
+}
+
+#features .feature-box .vertical-line {
+    position: absolute;
+    right: -20px; /* Сместить линию к краю колонки */
+    top: 0;
+    height: 100%;
+    width: 2px; /* Толщина линии */
+    background-color: black; /* Цвет линии */
+}
+
+#features .feature-box:last-child .vertical-line {
+    display: none; /* Убрать линию у последней колонки */
+}
+
 /* Стили для кнопки */
 button {
     background-color: #404040;
