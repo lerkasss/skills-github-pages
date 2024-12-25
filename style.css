@@ -159,8 +159,7 @@ nav a:hover {
 }
 
 #features .col-md-3 {
-    flex: 0 0 33.3333%; /* Force each column to take one-third of the width */
-    max-width: 33.3333%;
+    flex: 0 0 30%;
 }
 
 /* Стили для кнопки */
