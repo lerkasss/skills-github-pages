@@ -140,22 +140,27 @@ nav a:hover {
 
 /* features */
 #features .feature-box {
-    margin: 0 20px; /* Расстояние между колонками (итого 40px) */
-    position: relative; /* Для абсолютного позиционирования линии */
+    margin: 0 20px; /* Отступ между колонками */
+    position: relative;
 }
 
 #features .feature-box .vertical-line {
     position: absolute;
-    right: -20px; /* Сместить линию к краю колонки */
+    right: 0; /* Линия точно по правому краю */
     top: 0;
-    height: 100%;
-    width: 2px; /* Толщина линии */
-    background-color: black; /* Цвет линии */
+    height: 80%;
+    width: 2px;
+    background-color: black;
 }
 
 #features .feature-box:last-child .vertical-line {
-    display: none; /* Убрать линию у последней колонки */
+    display: none; /* Убираем линию у последней колонки */
 }
+
+#features .row {
+    gap: 40px; /* Гарантирует отступы между колонками */
+}
+
 
 /* Стили для кнопки */
 button {
