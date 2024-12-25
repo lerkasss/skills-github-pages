@@ -167,6 +167,9 @@ h2 {
     font-weight: 700;
     font-size: 20px;
 }
+.button-center {
+    text-align: center; /* Centers inline and inline-block elements */
+}
 
 /* Стили для кнопки */
 button {
