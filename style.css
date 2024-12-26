@@ -21,7 +21,7 @@ header {
 header img {
     height: 40px;
     width: auto;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 /* Меню навигации в хедере */
@@ -166,6 +166,7 @@ h2 {
     font-family: 'Mplus 1p', sans-serif;
     font-weight: 700;
     font-size: 20px;
+    
 }
 .button-center {
     text-align: center; /* Centers inline and inline-block elements */
