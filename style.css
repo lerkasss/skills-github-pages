@@ -187,50 +187,47 @@ h2 {
 
 /* General section styling */
 #reviews {
-    background-color: #f9f9f9; /* Light background for the section */
-    padding: 20px 0; /* Space around the content */
-    overflow-x: hidden; /* Prevent horizontal scrolling overflow */
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Scrollable reviews container */
 .reviews-container {
     display: flex;
     gap: 20px; /* Space between cards */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scroll-behavior: smooth; /* Smooth scroll effect */
-    padding: 10px 20px; /* Space within the scrolling area */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
-
-.reviews-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
+    overflow: hidden; /* Hide overflow */
+    padding: 10px 20px;
+    white-space: nowrap; /* Prevent line breaks */
 }
 
 /* Review card styling */
 .review-card {
-    background: #ffffff; /* White background for the cards */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
-    min-width: 250px; /* Minimum width for each card */
-    flex-shrink: 0; /* Prevent shrinking during scrolling */
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 250px;
+    flex-shrink: 0;
 }
 
-/* Text content inside the card */
+/* Review text */
 .review-content p {
     margin: 0;
     font-size: 16px;
-    color: #333; /* Dark text for reviews */
+    color: #333;
 }
 
-/* Author name styling */
+/* Author styling */
 .review-author {
     display: block;
-    text-align: center; /* Align the name below the card */
-    margin-top: 10px; /* Space between card and name */
-    color: #000; /* Black text for the name */
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
     font-weight: bold;
 }
+
 
 .button-center {
     text-align: center; /* Centers inline and inline-block elements */
