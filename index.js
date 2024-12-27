@@ -72,3 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+    alert("Thank you for contacting us! We'll get back to you shortly.");
+    this.reset(); // Clear the form fields
+});
+
