@@ -31,3 +31,26 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 };
+//reviews
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".reviews-container");
+    const reviewsSection = document.querySelector("#reviews");
+
+    // Speed of scroll (adjust as needed)
+    const scrollSpeed = 2;
+
+    reviewsSection.addEventListener("mousemove", (e) => {
+        const { left, right, width } = reviewsSection.getBoundingClientRect();
+        const cursorX = e.clientX - left; // Cursor position relative to section
+
+        // Determine scroll direction and speed
+        if (cursorX < width * 0.3) {
+            // Cursor in the left part
+            container.scrollLeft -= scrollSpeed;
+        } else if (cursorX > width * 0.7) {
+            // Cursor in the right part
+            container.scrollLeft += scrollSpeed;
+        }
+    });
+});
+
