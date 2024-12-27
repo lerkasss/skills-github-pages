@@ -242,6 +242,18 @@ h2 {
     display: block; /* Имя должно быть на новой строке */
 }
 
+/* Mobile/Tablet Layout */
+@media (max-width: 768px) {
+    .reviews-container {
+        display: flex;
+        gap: 0;
+    }
+
+    .review-card {
+        width: calc(100% / 3 - 10px); /* Three cards in a row */
+    }
+}
+
 .button-center {
     text-align: center; /* Centers inline and inline-block elements */
     margin-top: 20px;
