@@ -37,28 +37,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviewsSection = document.querySelector("#reviews");
 
     // Настройка скорости прокрутки
-    const scrollSpeed = 7; // Плавное движение
-    let scrollTimeout;
+    const scrollSpeed = 1; // Плавное движение
+    let scrollDirection = 0; // Направление прокрутки (0 - нет движения)
+    let lastTime = 0; // Последнее время обновления
+
+    function smoothScroll() {
+        // Обновление позиции прокрутки с плавностью
+        if (scrollDirection !== 0) {
+            container.scrollLeft += scrollDirection * scrollSpeed;
+        }
+        requestAnimationFrame(smoothScroll);
+    }
 
     reviewsSection.addEventListener("mousemove", (e) => {
-        // Очищаем предыдущую задержку, чтобы избежать излишнего движения
-        if (scrollTimeout) clearTimeout(scrollTimeout);
-
+        // Получаем позицию курсора относительно секции
         const { left, right, width } = reviewsSection.getBoundingClientRect();
-        const cursorX = e.clientX - left; // Позиция курсора относительно секции
+        const cursorX = e.clientX - left;
 
-        // Определение направления и скорости прокрутки
+        // Определяем направление прокрутки
         if (cursorX < width * 0.3) {
-            // Курсор в левой части
-            scrollTimeout = setTimeout(() => {
-                container.scrollLeft -= scrollSpeed;
-            }, 15); // Задержка для плавности
+            // Курсор в левой части — скроллим влево
+            scrollDirection = -1;
         } else if (cursorX > width * 0.7) {
-            // Курсор в правой части
-            scrollTimeout = setTimeout(() => {
-                container.scrollLeft += scrollSpeed;
-            }, 15); // Задержка для плавности
+            // Курсор в правой части — скроллим вправо
+            scrollDirection = 1;
+        } else {
+            // Курсор в центре — останавливаем прокрутку
+            scrollDirection = 0;
         }
     });
+    requestAnimationFrame(smoothScroll);
 });
-
