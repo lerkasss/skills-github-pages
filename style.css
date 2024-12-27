@@ -201,6 +201,7 @@ h2 {
     padding: 10px;
     white-space: nowrap; /* Предотвращает разрыв строк */
     align-items: flex-start; /* Выравнивание карточек и имён авторов */
+    scroll-behavior: smooth; /* Плавная прокрутка */
 }
 
 /* Стиль карточки отзыва */
