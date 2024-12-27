@@ -171,6 +171,16 @@ h2 {
     margin-top: 100px !important;
     padding-toop: 50px;
 }
+
+/*faq*/
+#faq p {
+    text-indent: 0;
+}
+
+#faq p strong {
+    display: inline;
+    margin-left: 20px;
+}
 .button-center {
     text-align: center; /* Centers inline and inline-block elements */
     margin-top: 20px;
