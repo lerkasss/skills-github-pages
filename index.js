@@ -36,35 +36,41 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".reviews-container");
     const reviewsSection = document.querySelector("#reviews");
 
-    // Настройка скорости прокрутки
-    const scrollSpeed = 1; // Плавное движение
-    let scrollDirection = 0; // Направление прокрутки (0 - нет движения)
-    let lastTime = 0; // Последнее время обновления
+    const maxScrollSpeed = 2; // Maximum scroll speed (adjust as needed)
+    let scrollDirection = 0; // Direction of scroll (-1 for left, 1 for right)
+    let lastTime = 0; // Time tracking for smooth animation
 
+    // Smooth scrolling function
     function smoothScroll() {
-        // Обновление позиции прокрутки с плавностью
+        const currentTime = Date.now();
+        const deltaTime = currentTime - lastTime;
+        const speed = Math.min(maxScrollSpeed, deltaTime / 10); // Control scroll speed
+
         if (scrollDirection !== 0) {
-            container.scrollLeft += scrollDirection * scrollSpeed;
+            container.scrollLeft += scrollDirection * speed;
         }
+        lastTime = currentTime;
+
+        // Call the function on the next frame
         requestAnimationFrame(smoothScroll);
     }
 
+    // Mouse move listener to track cursor position
     reviewsSection.addEventListener("mousemove", (e) => {
-        // Получаем позицию курсора относительно секции
-        const { left, right, width } = reviewsSection.getBoundingClientRect();
+        const { left, width } = reviewsSection.getBoundingClientRect();
         const cursorX = e.clientX - left;
+        const centerX = width / 2;
 
-        // Определяем направление прокрутки
-        if (cursorX < width * 0.3) {
-            // Курсор в левой части — скроллим влево
-            scrollDirection = -1;
-        } else if (cursorX > width * 0.7) {
-            // Курсор в правой части — скроллим вправо
-            scrollDirection = 1;
+        // Calculate scroll direction based on cursor position
+        if (cursorX < centerX * 0.3) {
+            scrollDirection = -1; // Scroll left
+        } else if (cursorX > centerX * 1.7) {
+            scrollDirection = 1; // Scroll right
         } else {
-            // Курсор в центре — останавливаем прокрутку
-            scrollDirection = 0;
+            scrollDirection = 0; // No scroll
         }
     });
+
+    // Start the smooth scrolling process
     requestAnimationFrame(smoothScroll);
 });
