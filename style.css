@@ -206,9 +206,6 @@ h2 {
 
 /* Стиль карточки отзыва */
 .review-card {
-    background: #ffffff;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
     padding: 10px;
     max-width: 350px; /* Максимальная ширина карточки */
     flex-shrink: 0;
@@ -222,7 +219,12 @@ h2 {
 /* Стиль текста отзыва */
 .review-content p {
     margin: 0;
-    font-size: 14px;
+    padding: 10px;
+    word-wrap: break-word; /* Позволяет тексту переходить на новую строку */
+    font-size: 16px;
+    background: #ffffff;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
     color: #333;
     text-align: justify; /* Выравнивание текста по ширине */
 }
