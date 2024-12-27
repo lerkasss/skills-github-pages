@@ -242,12 +242,50 @@ h2 {
     display: block; /* Имя должно быть на новой строке */
 }
 
-/* Mobile/Tablet Layout */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
+    #reviews {
+        overflow: hidden;
+        width: 100%;
+    }
+
     .reviews-container {
         display: flex;
+        flex-direction: row;
+        width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .reviews-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Full width for each page */
         gap: 0;
     }
+
+    .review-card {
+        background-color: white;
+        padding: 20px;
+        width: calc(100% - 40px); /* Reduced width for mobile with padding */
+        max-width: 350px;
+        margin: 0 auto; /* Centered horizontally */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    .review-card .review-text {
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .review-card .author-name {
+        margin-top: 10px;
+        align-self: flex-start;
+    }
+}
+
 
     .review-card {
         width: calc(100% / 3 - 10px); /* Three cards in a row */
