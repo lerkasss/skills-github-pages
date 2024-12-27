@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Настройка скорости прокрутки
     const scrollSpeed = 7; // Плавное движение
-    
+    let scrollTimeout;
 
     reviewsSection.addEventListener("mousemove", (e) => {
         // Очищаем предыдущую задержку, чтобы избежать излишнего движения
