@@ -174,13 +174,17 @@ h2 {
 
 /*faq*/
 #faq p {
+    margin: 0;
+    padding: 0;
     text-indent: 0;
+    display: flex; /* Align all lines */
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 #faq p strong {
-    display: inline;
-    margin-left: 20px;
+    margin-right: 5px; /* Space between strong and regular text */
 }
+
 .button-center {
     text-align: center; /* Centers inline and inline-block elements */
     margin-top: 20px;
