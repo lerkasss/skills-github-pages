@@ -36,20 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".reviews-container");
     const reviewsSection = document.querySelector("#reviews");
 
-    // Speed of scroll (adjust as needed)
-    const scrollSpeed = 4;
+    // Настройка скорости прокрутки
+    const scrollSpeed = 7; // Плавное движение
+    let scrollTimeout;
 
     reviewsSection.addEventListener("mousemove", (e) => {
-        const { left, right, width } = reviewsSection.getBoundingClientRect();
-        const cursorX = e.clientX - left; // Cursor position relative to section
+        // Очищаем предыдущую задержку, чтобы избежать излишнего движения
+        if (scrollTimeout) clearTimeout(scrollTimeout);
 
-        // Determine scroll direction and speed
+        const { left, right, width } = reviewsSection.getBoundingClientRect();
+        const cursorX = e.clientX - left; // Позиция курсора относительно секции
+
+        // Определение направления и скорости прокрутки
         if (cursorX < width * 0.3) {
-            // Cursor in the left part
-            container.scrollLeft -= scrollSpeed;
+            // Курсор в левой части
+            scrollTimeout = setTimeout(() => {
+                container.scrollLeft -= scrollSpeed;
+            }, 15); // Задержка для плавности
         } else if (cursorX > width * 0.7) {
-            // Cursor in the right part
-            container.scrollLeft += scrollSpeed;
+            // Курсор в правой части
+            scrollTimeout = setTimeout(() => {
+                container.scrollLeft += scrollSpeed;
+            }, 15); // Задержка для плавности
         }
     });
 });
