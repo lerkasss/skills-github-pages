@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviewsSection = document.querySelector("#reviews");
 
     // Speed of scroll (adjust as needed)
-    const scrollSpeed = 2;
+    const scrollSpeed = 4;
 
     reviewsSection.addEventListener("mousemove", (e) => {
         const { left, right, width } = reviewsSection.getBoundingClientRect();
