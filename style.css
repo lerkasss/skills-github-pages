@@ -201,7 +201,6 @@ h2 {
     padding: 10px;
     white-space: nowrap; /* Предотвращает разрыв строк */
     align-items: flex-start; /* Выравнивание карточек и имён авторов */
-    scroll-behavior: smooth;
 }
 
 /* Стиль карточки отзыва */
@@ -213,6 +212,7 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     word-wrap: break-word; /* Позволяет тексту переходить на новую строку */
+    overflow-wrap: break-word; 
     width: 100%; /* Карточка будет растягиваться до максимальной ширины */
 }
 
@@ -227,6 +227,7 @@ h2 {
     border-radius: 6px;
     color: #333;
     text-align: justify; /* Выравнивание текста по ширине */
+    overflow-wrap: break-word; /* Обеспечивает перенос длинных слов */
 }
 
 /* Стиль имени автора */
