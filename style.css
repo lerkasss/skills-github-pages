@@ -66,18 +66,18 @@ nav a:hover {
 
 /* Контейнер переключателя языков */
 .language-switcher {
-    position: relative; /* The parent container needs to be relative for absolute positioning */
+    position: relative; /* Чтобы dropdown позиционировался относительно RU */
+    display: inline-block; /* Для компактного отображения */
 }
 
 .language-switcher .dropdown {
-    display: none; /* Hide initially */
-    position: absolute; /* Detach from layout flow */
-    top: 100%; /* Position below the current language link */
-    right: 0; /* Align dropdown to the right of the container */
-    list-style: none; /* Remove default list styles */
+    display: none; /* Скрываем список изначально */
+    position: absolute; /* Позиционирование относительно RU */
+    top: 100%; /* Сразу под RU */
+    left: 0; /* Выравниваем по левому краю */
+    list-style: none;
     margin: 0;
     padding: 5px 0;
-    z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .language-switcher .dropdown li {
@@ -85,14 +85,13 @@ nav a:hover {
 }
 
 .language-switcher .dropdown li a {
+    color: black;
     text-decoration: none;
-    display: block; /* Ensure the clickable area covers the entire item */
+    display: block;
 }
 
-
-/* Show dropdown on activation */
-.language-switcher .current-lang[aria-expanded="true"] + .dropdown {
-    display: block; /* Show the dropdown */
+.language-switcher .dropdown li a:hover {
+    background-color: #f0f0f0; /* Подсветка при наведении */
 }
 
 
