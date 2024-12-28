@@ -78,37 +78,39 @@ nav a:hover {
     font-size: 16px;
     padding: 5px; /* Опционально для отступов */
 }
-
+.language-switcher .current-lang:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+}
 /* Скрытие выпадающего списка по умолчанию */
+
 .language-switcher .dropdown {
-    display: none;        /* Скрыть изначально */
-    position: absolute;
-    top: 90%;
-    left: 0;
-    list-style: none;
+    display: none; /* Hide initially */
+    position: absolute; /* Detach from layout flow */
+    top: 100%; /* Position below the current language link */
+    right: 0; /* Align dropdown to the right of the container */
+    list-style: none; /* Remove default list styles */
     margin: 0;
-    padding-left: 5px;
-    z-index: 1000; /* Ensures it appears above other elements */
+    padding: 5px 0;
+    z-index: 1000; /* Ensure it appears above other elements */
 }
 
-/* Элементы выпадающего списка */
 .language-switcher .dropdown li {
-    margin: 0;
-    padding: 0;
+    padding: 5px 10px;
 }
 
-/* Ссылки в выпадающем списке */
 .language-switcher .dropdown li a {
+    color: #333; /* Link color */
     text-decoration: none;
-    color: black;
-    display: block;
-    font-size: 16px;
-    padding: 0; /* Без дополнительных отступов */
+    display: block; /* Ensure the clickable area covers the entire item */
 }
 
-/* Показываем dropdown при активации */
-.language-switcher.active .dropdown {
-    display: block;
+.language-switcher .dropdown li a:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+}
+
+/* Show dropdown on activation */
+.language-switcher .current-lang[aria-expanded="true"] + .dropdown {
+    display: block; /* Show the dropdown */
 }
 
 
