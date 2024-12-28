@@ -108,10 +108,7 @@ nav a:hover {
     background-color: #f0f0f0; /* Background color on hover */
 }
 
-/* Show dropdown on activation */
-.language-switcher .current-lang[aria-expanded="true"] + .dropdown {
-    display: block; /* Show the dropdown */
-}
+
 
 
 /* Основной контейнер */
