@@ -66,21 +66,18 @@ nav a:hover {
 
 /* Контейнер переключателя языков */
 .language-switcher {
-    position: relative; /* Keeps dropdown aligned with the parent */
-    display: inline-block; /* Compact display for RU and dropdown */
-    margin-top: 10px; /* Adds spacing from surrounding elements */
+    position: relative; /* Positioning dropdown relative to RU */
+    display: inline-block; /* Keeps RU and dropdown compact */
+    margin-top: 10px; /* Optional, adds spacing above the switcher */
 }
 
-/* Dropdown Styling */
 .language-switcher .dropdown {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned relative to the parent */
-    top: 100%; /* Aligns directly below RU */
-    right: 0; /* Ensures it aligns to the right of the parent */
-    list-style: none; /* Removes default list styles */
-    margin: 0; /* Resets margins for consistency */
-    padding: 0; /* Resets padding for consistency */
-    z-index: 1000;
+    display: none; /* Initially hides the dropdown */
+    position: absolute; /* Position dropdown relative to the parent */
+    right: 0; /* Align to the right edge of the switcher */
+    margin-top: -5px; /* Fine-tune vertical alignment */
+    margin-right: 34px; /* Adjust horizontal position if needed */
+    list-style: none; /* Remove bullets from the list */
 }
 
 .language-switcher .dropdown li {
