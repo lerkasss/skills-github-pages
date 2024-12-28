@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".reviews-container");
     const reviewsSection = document.querySelector("#reviews");
 
-    const maxScrollSpeed = 2; // Maximum scroll speed (adjust as needed)
+    const maxScrollSpeed = 5; // Maximum scroll speed (adjust as needed)
     let scrollDirection = 0; // Direction of scroll (-1 for left, 1 for right)
     let lastTime = 0; // Time tracking for smooth animation
 
