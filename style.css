@@ -294,31 +294,24 @@ h2 {
     }
 }
 .button-center {
-    text-align: center; /* Centers the button within the container */
-    margin-top: 20px; /* Adds spacing above the button, if needed */
+    display: flex; /* Enables flexbox for centering */
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* (Optional) Centers the button vertically if needed */
+    margin: 20px 0; /* Adds vertical spacing (adjust as needed) */
 }
-.btn .btn-dark {
-    background-color: #404040;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+.btn.btn-dark {
+    background-color: #404040; /* Sets the background color */
+    color: white; /* Ensures text is visible */
+    font-size: 1rem; /* Adjusts the font size */
+    font-weight: bold; /* Makes the text bold */
+    padding: 10px 20px; /* Adds padding for the button */
+    border: none; /* Removes the border */
+    border-radius: 10px; /* Rounds the button's corners */
+    cursor: pointer; /* Adds a pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
 }
-.button-center .btn .btn-dark {
-    background-color: #404040;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+
 
 /* Стили для кнопки */
 button {
