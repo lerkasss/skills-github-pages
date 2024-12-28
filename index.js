@@ -32,46 +32,33 @@ window.onclick = function(event) {
     }
 };
 //reviews
-document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".reviews-container");
-    let startX = 0;
-    let currentPage = 0;
+const reviewsContainer = document.querySelector('.reviews-container');
 
-    // Check if it's a mobile device
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+if (window.innerWidth > 768) {
+    document.addEventListener('mousemove', (e) => {
+        const { clientX } = e;
+        const screenWidth = window.innerWidth;
+        const scrollWidth = reviewsContainer.scrollWidth - reviewsContainer.clientWidth;
 
-    // Only enable swipe for mobile
-    if (isMobile) {
-        const pages = document.querySelectorAll(".reviews-page");
-        const totalPages = pages.length;
+        const scrollPercentage = clientX / screenWidth;
+        const targetScroll = scrollWidth * scrollPercentage;
 
-        // Touchstart event
-        container.addEventListener("touchstart", (e) => {
-            startX = e.touches[0].clientX;
+        reviewsContainer.scrollTo({
+            left: targetScroll,
+            behavior: 'smooth',
         });
+    });
+} else {
+    reviewsContainer.addEventListener('touchstart', (e) => {
+        const startX = e.touches[0].clientX;
 
-        // Touchmove event
-        container.addEventListener("touchmove", (e) => {
-            const x = e.touches[0].clientX;
-            const diff = startX - x;
-
-            if (diff > 50 && currentPage < totalPages - 1) {
-                currentPage++;
-                updatePage();
-            }
-
-            if (diff < -50 && currentPage > 0) {
-                currentPage--;
-                updatePage();
-            }
+        reviewsContainer.addEventListener('touchmove', (moveEvent) => {
+            const deltaX = moveEvent.touches[0].clientX - startX;
+            reviewsContainer.scrollLeft -= deltaX;
         });
+    });
+}
 
-        function updatePage() {
-            const offset = -currentPage * window.innerWidth;
-            container.style.transform = `translateX(${offset}px)`;
-        }
-    }
-});
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent default form submission
