@@ -3,11 +3,13 @@
 console.log("The script is working!");
 
 function toggleDropdown(event) {
-    console.log("Dropdown toggled");
     event.preventDefault();
-    const switcher = event.target.closest('.language-switcher');
-    switcher.classList.toggle('active');
+    const currentLang = event.currentTarget;
+    const dropdown = document.getElementById("languageDropdown");
+    const isExpanded = currentLang.getAttribute("aria-expanded") === "true";
+    currentLang.setAttribute("aria-expanded", !isExpanded);
 }
+
 
 // Open modal
 function openModal() {
