@@ -75,8 +75,8 @@ nav a:hover {
     display: none; /* Initially hides the dropdown */
     position: absolute; /* Position dropdown relative to the parent */
     right: 0; /* Align to the right edge of the switcher */
-    margin-top: -5px; /* Fine-tune vertical alignment */
-    margin-right: 34px; /* Adjust horizontal position if needed */
+    margin-top: -10px; /* Fine-tune vertical alignment */
+    margin-right: 25px; /* Adjust horizontal position if needed */
     list-style: none; /* Remove bullets from the list */
 }
 
@@ -90,7 +90,7 @@ nav a:hover {
     display: block;
 }
 
-.language-switcher:hover {
+.language-switcher .current-lang:hover {
     background-color: #f0f0f0; /* Подсветка при наведении */
 }
 
