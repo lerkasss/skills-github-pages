@@ -293,7 +293,7 @@ h2 {
         width: calc(100% / 3 - 10px); /* Three cards in a row */
     }
 }
-.button-center {
+.container .button-center {
     display: flex; /* Enables flexbox for centering */
     justify-content: center; /* Centers the button horizontally */
     align-items: center; /* (Optional) Centers the button vertically if needed */
