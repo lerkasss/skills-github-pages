@@ -99,9 +99,7 @@ nav a:hover {
 }
 
 .language-switcher .dropdown li a {
-    color: #333; /* Link color */
     text-decoration: none;
-    display: block; /* Ensure the clickable area covers the entire item */
 }
 
 .language-switcher .dropdown li a:hover {
