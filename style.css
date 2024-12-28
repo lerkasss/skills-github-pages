@@ -327,10 +327,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #000;
-}
-
 /* Адаптивность */
 @media (max-width: 768px) {
     .grid-container {
