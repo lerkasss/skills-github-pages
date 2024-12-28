@@ -203,23 +203,7 @@ h2 {
 #faq p strong {
     margin-right: 5px; /* Space between strong and regular text */
 }
-.button-center{
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    display: block; /* Make the button a block element */
-    margin: 0 auto; /* Center the button horizontally */
-    text-align: center; /* Center text inside the button */
-    transition: background-color 0.3s ease;
-}
 
-.button-center:hover {
-    background-color: #000;
-}
 /* General section styling */
 /* Общий стиль секции */
 #reviews {
