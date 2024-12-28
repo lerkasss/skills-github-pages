@@ -222,6 +222,7 @@ h2 {
 
 /* Стиль текста отзыва */
 .review-content p {
+    background-color: #FBFBFB;
     margin: 0;
     font-size: 14px;
     color: #333;
