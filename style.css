@@ -305,9 +305,6 @@ h2 {
     color: white; /* Ensures text is visible */
     font-size: 1rem; /* Adjusts the font size */
     font-weight: bold; /* Makes the text bold */
-    padding: 10px 20px; /* Adds padding for the button */
-    border: none; /* Removes the border */
-    border-radius: 10px; /* Rounds the button's corners */
     cursor: pointer; /* Adds a pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth color transition on hover */
 }
