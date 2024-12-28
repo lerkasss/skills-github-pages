@@ -66,22 +66,8 @@ nav a:hover {
 
 /* Контейнер переключателя языков */
 .language-switcher {
-    display: inline-block; /* Для горизонтального расположения */
-    position: relative;    /* Для абсолютного позиционирования EN */
-    padding-top: 10px;
+    position: relative; /* The parent container needs to be relative for absolute positioning */
 }
-
-/* Ссылка на текущий язык */
-.language-switcher .current-lang {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    padding: 5px; /* Опционально для отступов */
-}
-.language-switcher .current-lang:hover {
-    background-color: #f0f0f0; /* Background color on hover */
-}
-/* Скрытие выпадающего списка по умолчанию */
 
 .language-switcher .dropdown {
     display: none; /* Hide initially */
@@ -100,13 +86,14 @@ nav a:hover {
 
 .language-switcher .dropdown li a {
     text-decoration: none;
-}
-
-.language-switcher .dropdown li a:hover {
-    background-color: #f0f0f0; /* Background color on hover */
+    display: block; /* Ensure the clickable area covers the entire item */
 }
 
 
+/* Show dropdown on activation */
+.language-switcher .current-lang[aria-expanded="true"] + .dropdown {
+    display: block; /* Show the dropdown */
+}
 
 
 /* Основной контейнер */
