@@ -186,6 +186,7 @@ h2 {
 }
 
 /* General section styling */
+/* Общий стиль секции */
 #reviews {
     background-color: #f9f9f9;
     padding: 20px 0;
@@ -196,52 +197,34 @@ h2 {
 /* Контейнер с отзыва */
 .reviews-container {
     display: flex;
-    gap: 20px; /* Distance between cards */
-    overflow: hidden; /* Hide overflowing content */
+    gap: 10px; /* Расстояние между карточками */
+    overflow: hidden;
     padding: 10px;
-    white-space: nowrap; /* Prevent line breaks */
-    align-items: flex-start;
-    scroll-behavior: smooth; /* Smooth scrolling */
-    transition: transform 0.2s ease-out; /* Smoother motion */
+    white-space: nowrap; /* Предотвращает разрыв строк в контейнере */
+    align-items: flex-start; /* Выравнивание карточек и имён авторов */
+    scroll-behavior: smooth; /* Плавная прокрутка */
 }
 
+/* Стиль карточки отзыва */
 .review-card {
+    background: #ffffff;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
     padding: 10px;
-    max-width: 350px; /* Maximum width of review card */
+    max-width: 350px; /* Максимальная ширина карточки */
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    word-wrap: break-word; /* Allow line wrapping */
-    overflow-wrap: break-word;
-    width: 100%; /* Cards will stretch to maximum width */
-    background: #ffffff;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    text-align: justify; /* Align text to justify */
-    white-space: normal; /* Enable line breaks */
+    word-wrap: break-word; /* Позволяет тексту переходить на новую строку */
+    overflow-wrap: break-word; /* Обеспечивает перенос длинных слов */
+    width: 100%; /* Карточка будет растягиваться до максимальной ширины */
 }
-
-.review-author {
-    color: #000;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 5px;
-    margin-left: 10px;
-    display: block;
-}
-
-
-/* Стиль карточки отзыва */
 
 /* Стиль текста отзыва */
 .review-content p {
     margin: 0;
-    padding: 10px;
-    font-size: 16px;
-    background: #ffffff;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
+    font-size: 14px;
     color: #333;
     text-align: justify; /* Выравнивание текста по ширине */
     word-wrap: break-word; /* Позволяет тексту переходить на новую строку */
@@ -249,6 +232,15 @@ h2 {
     white-space: normal; /* Разрешает перенос строк */
 }
 
+/* Стиль имени автора */
+.review-author {
+    color: #000;
+    font-weight: bold;
+    text-align: left; /* Выравнивание имени по левому краю */
+    margin-top: 5px;
+    margin-left: 10px; /* Выравнивание с отступом */
+    display: block; /* Имя должно быть на новой строке */
+}
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
