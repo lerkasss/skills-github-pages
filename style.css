@@ -203,7 +203,7 @@ h2 {
 #faq p strong {
     margin-right: 5px; /* Space between strong and regular text */
 }
-.btn btn-dark{
+.button-center{
     background-color: #404040;
     color: white;
     font-size: 1rem;
@@ -218,7 +218,7 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-btn btn-dark:hover {
+.button-center:hover {
     background-color: #000;
 }
 /* General section styling */
