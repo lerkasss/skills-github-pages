@@ -310,8 +310,11 @@ h2 {
         width: calc(100% / 3 - 10px); /* Three cards in a row */
     }
 }
-
-.btn btn-dark {
+.button-center {
+    text-align: center; /* Centers the button within the container */
+    margin-top: 20px; /* Adds spacing above the button, if needed */
+}
+.btn .btn-dark {
     background-color: #404040;
     color: white;
     font-size: 1rem;
@@ -323,7 +326,7 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-.btn btn-dark:hover {
+.btn .btn-dark:hover {
     background-color: #000;
 }
 
