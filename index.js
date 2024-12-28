@@ -32,32 +32,49 @@ window.onclick = function(event) {
     }
 };
 //reviews
-const reviewsContainer = document.querySelector('.reviews-container');
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".reviews-container");
+    const reviewsSection = document.querySelector("#reviews");
 
-if (window.innerWidth > 768) {
-    document.addEventListener('mousemove', (e) => {
-        const { clientX } = e;
-        const screenWidth = window.innerWidth;
-        const scrollWidth = reviewsContainer.scrollWidth - reviewsContainer.clientWidth;
+    const maxScrollSpeed = 2; // Maximum scroll speed (adjust as needed)
+    let scrollDirection = 0; // Direction of scroll (-1 for left, 1 for right)
+    let lastTime = 0; // Time tracking for smooth animation
 
-        const scrollPercentage = clientX / screenWidth;
-        const targetScroll = scrollWidth * scrollPercentage;
+    // Smooth scrolling function
+    function smoothScroll() {
+        const currentTime = Date.now();
+        const deltaTime = currentTime - lastTime;
+        const speed = Math.min(maxScrollSpeed, deltaTime / 10); // Control scroll speed
 
-        reviewsContainer.scrollTo({
-            left: targetScroll,
-            behavior: 'smooth',
-        });
+        if (scrollDirection !== 0) {
+            container.scrollLeft += scrollDirection * speed;
+        }
+        lastTime = currentTime;
+
+        // Call the function on the next frame
+        requestAnimationFrame(smoothScroll);
+    }
+
+    // Mouse move listener to track cursor position
+    reviewsSection.addEventListener("mousemove", (e) => {
+        const { left, width } = reviewsSection.getBoundingClientRect();
+        const cursorX = e.clientX - left;
+        const centerX = width / 2;
+
+        // Calculate scroll direction based on cursor position
+        if (cursorX < centerX * 0.3) {
+            scrollDirection = -1; // Scroll left
+        } else if (cursorX > centerX * 1.7) {
+            scrollDirection = 1; // Scroll right
+        } else {
+            scrollDirection = 0; // No scroll
+        }
     });
-} else {
-    reviewsContainer.addEventListener('touchstart', (e) => {
-        const startX = e.touches[0].clientX;
 
-        reviewsContainer.addEventListener('touchmove', (moveEvent) => {
-            const deltaX = moveEvent.touches[0].clientX - startX;
-            reviewsContainer.scrollLeft -= deltaX;
-        });
-    });
-}
+    // Start the smooth scrolling process
+    requestAnimationFrame(smoothScroll);
+});
+
 
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
