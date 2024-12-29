@@ -417,13 +417,16 @@ button {
 }
 
 .contact-form input {
-width: 100%;
-padding: 10px;
-margin-bottom: 15px;
-border-radius: 10px;
-font-size: 16px;
-box-sizing: border-box;
-border-color: #F9F5EF;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #F9F5EF; /* Ensures a consistent border */
+    box-shadow: none; /* Removes any inner shadow */
+    outline: none; /* Removes focus outline for consistency */
+    background-color: #ffffff; /* Sets a clean background color */
 }
 .contact-form .input button{    
     background-color: #404040;
@@ -442,13 +445,16 @@ border-color: #F9F5EF;
 
 
 .contact-form textarea {
-width: 100%;
-padding: 10px;
-margin-bottom: 15px;
-border-radius: 10px;
-font-size: 16px;
-box-sizing: border-box;
-border-color: #F9F5EF;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #F9F5EF; /* Ensures a consistent border */
+    box-shadow: none; /* Removes any inner shadow */
+    outline: none; /* Removes focus outline for consistency */
+    background-color: #ffffff; /* Sets a clean background color */
 }
 
 .contact-form button {
