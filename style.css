@@ -294,12 +294,6 @@ h2 {
         width: calc(100% / 3 - 10px); /* Three cards in a row */
     }
 }
-.container .button-center {
-    display: flex; /* Enables flexbox for centering */
-    justify-content: center; /* Centers the button horizontally */
-    align-items: center; /* (Optional) Centers the button vertically if needed */
-    margin: 20px 0; /* Adds vertical spacing (adjust as needed) */
-}
 
 .btn.btn-dark {
     background-color: #404040; /* Sets the background color */
@@ -308,6 +302,12 @@ h2 {
     font-weight: bold; /* Makes the text bold */
     cursor: pointer; /* Adds a pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+.btn.btn-dark1 {
+    display: flex; /* Enables flexbox for centering */
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* (Optional) Centers the button vertically if needed */
+    margin: 20px 0; /* Adds vertical spacing (adjust as needed) */
 }
 
 
