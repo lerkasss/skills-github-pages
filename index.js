@@ -78,6 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(smoothScroll);
 });
 
+// Update file name display after file selection
+function updateFileName() {
+    const fileInput = document.getElementById('document');
+    const fileName = document.getElementById('fileName');
+    fileName.textContent = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
+}
 
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
