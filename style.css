@@ -298,22 +298,23 @@ h2 {
     }
 }
 .button-center {
-    display: flex; /* Use Flexbox for centering */
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically align the content (optional) */
-    margin-top: 20px; /* Add spacing above the button */
-    width: 100%; /* Ensure it spans the full width */
+    display: flex; /* Используем Flexbox для центрирования */
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+    height: 100vh; /* Задаём высоту контейнера на весь экран */
+    width: 100%; /* Контейнер занимает всю ширину */
 }
+
 .btn.btn-dark {
-    display: flex; /* Use Flexbox for centering */
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically align the content (optional) */
-    background-color: #404040; /* Sets the background color */
-    color: white; /* Ensures text is visible */
-    font-size: 1rem; /* Adjusts the font size */
-    font-weight: bold; /* Makes the text bold */
-    cursor: pointer; /* Adds a pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    background-color: #404040; /* Цвет фона */
+    color: white; /* Цвет текста */
+    font-size: 1rem; /* Размер шрифта */
+    font-weight: bold; /* Полужирный шрифт */
+    padding: 10px 20px; /* Внутренний отступ */
+    border: none; /* Убираем границы */
+    border-radius: 10px; /* Закругляем края */
+    cursor: pointer; /* Курсор-указатель */
+    transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
 }
 
 
