@@ -352,21 +352,22 @@ button {
     margin-top: 20px;
 }
 
+.icon-container {
+    display: flex; /* Use Flexbox for horizontal layout */
+    gap: 15px; /* Adds spacing between icons */
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Aligns icons vertically */
+}
+
 .icon-link {
-    text-decoration: none; /* Removes the underline */
-    display: inline-block; /* Ensures the icons are aligned horizontally */
-    color: inherit; /* Inherit color from the icon */
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures each icon acts like a block */
 }
 
 .icon-link i {
-    font-size: 30px; /* Adjust the size of the icons */
+    font-size: 30px; /* Adjust icon size */
 }
 
-.icon-link:hover i {
-    opacity: 0.7; /* Optional: Add hover effect */
-}
-
-/* Specific styles for each icon to set their colors */
 .icon-link .fa-telegram {
     color: #0088cc; /* Telegram color */
 }
@@ -377,6 +378,10 @@ button {
 
 .icon-link .fa-whatsapp {
     color: #25d366; /* WhatsApp color */
+}
+
+.icon-link:hover i {
+    opacity: 0.7; /* Optional hover effect */
 }
 
 .contact-info,
