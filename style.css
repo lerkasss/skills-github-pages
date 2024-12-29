@@ -264,9 +264,15 @@ h2 {
         flex: 0 0 calc(100% - 40px); /* Full width with padding for mobile */
         max-width: 350px;
         margin: 0 auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
+    .review-content {
+    background-color: #f9f9f9; /* Light background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 5px; /* Margin below the element */
+    padding: 10px; /* Optional: Add padding inside the element for content spacing */
+}
 
 
     .reviews-page {
@@ -294,7 +300,16 @@ h2 {
         width: calc(100% / 3 - 10px); /* Three cards in a row */
     }
 }
-
+.button-center {
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the container the height of the viewport */
+    width: 100%; /* Ensure full width */
+    margin: 0; /* Reset any default margins */
+    padding: 0; /* Reset any default padding */
+    box-sizing: border-box; /* Include padding and border in the element's dimensions */
+}
 .btn.btn-dark {
     background-color: #404040; /* Sets the background color */
     color: white; /* Ensures text is visible */
@@ -302,12 +317,6 @@ h2 {
     font-weight: bold; /* Makes the text bold */
     cursor: pointer; /* Adds a pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth color transition on hover */
-}
-.btn.btn-dark1 {
-    display: flex; /* Enables flexbox for centering */
-    justify-content: center; /* Centers the button horizontally */
-    align-items: center; /* (Optional) Centers the button vertically if needed */
-    margin: 20px 0; /* Adds vertical spacing (adjust as needed) */
 }
 
 
