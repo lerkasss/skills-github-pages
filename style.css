@@ -307,6 +307,16 @@ h2 {
     transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
 }
 
+.btn-dark {
+    background-color: #404040; /* Цвет фона */
+    color: white; /* Цвет текста */
+    font-size: 1rem; /* Размер шрифта */
+    font-weight: bold; /* Полужирный шрифт */
+    border: none; /* Убираем границы */
+    cursor: pointer; /* Курсор-указатель */
+    transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
 
 /* Стили для кнопки */
 button {
