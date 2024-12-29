@@ -305,6 +305,9 @@ h2 {
     width: 100%; /* Ensure it spans the full width */
 }
 .btn.btn-dark {
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically align the content (optional) */
     background-color: #404040; /* Sets the background color */
     color: white; /* Ensures text is visible */
     font-size: 1rem; /* Adjusts the font size */
@@ -343,6 +346,38 @@ button {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #404040; /* Default color for icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover (blue) */
+}
+
+.social-icons .telegram {
+    color: #0088cc; /* Telegram icon color */
+}
+
+.social-icons .facebook {
+    color: #3b5998; /* Facebook icon color */
+}
+
+.social-icons .whatsapp {
+    color: #25d366; /* WhatsApp icon color */
 }
 
 .contact-info,
