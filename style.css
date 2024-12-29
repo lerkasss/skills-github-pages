@@ -297,6 +297,13 @@ h2 {
         width: calc(100% / 3 - 10px); /* Three cards in a row */
     }
 }
+.button-center {
+    display: flex; /* Use flexbox to center the button */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button (if needed) */
+    width: 100%; /* Ensure the container takes the full width of the parent */
+    height: 100vh; /* Ensure the container takes full viewport height (optional) */
+}
 
 .btn.btn-dark {
     background-color: #404040; /* Цвет фона */
