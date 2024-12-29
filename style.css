@@ -222,8 +222,11 @@ h2 {
 
 /* Стиль текста отзыва */
 .review-content p {
-    background-color: #FBFBFB;
-    margin: 0;
+     background-color: #f9f9f9; /* Light background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 5px; /* Margin below the element */
+    padding: 10px; /* Optional: Add padding inside the element for content spacing */
     font-size: 14px;
     color: #333;
     text-align: justify; /* Выравнивание текста по ширине */
@@ -266,13 +269,7 @@ h2 {
         margin: 0 auto;
     }
 
-    .review-content {
-    background-color: #f9f9f9; /* Light background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 5px; /* Margin below the element */
-    padding: 10px; /* Optional: Add padding inside the element for content spacing */
-}
+
 
 
     .reviews-page {
