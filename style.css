@@ -456,6 +456,29 @@ button {
     outline: none; /* Removes focus outline for consistency */
     background-color: #ffffff; /* Sets a clean background color */
 }
+/* Custom File Input Button Styles */
+.custom-file-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F8F8F8; /* Button background color */
+    color: #000; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.custom-file-button:hover {
+    background-color: #F4F4F4; /* Darker shade on hover */
+}
+
+/* File name display */
+#fileName {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #EA9478;
+}
 
 .contact-form button {
     background-color: #404040;
