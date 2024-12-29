@@ -417,12 +417,13 @@ button {
 }
 
 .contact-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border-radius: 10px;
+font-size: 16px;
+box-sizing: border-box;
+border-color: #F9F5EF;
 }
 .contact-form .input button{    
     background-color: #404040;
@@ -439,12 +440,15 @@ button {
     transition: background-color 0.3s ease;
 }
 
-.contact-form .input button:hover {
-    background-color: #000;
-}
+
 .contact-form textarea {
-    resize: vertical;
-    height: 100px;
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border-radius: 10px;
+font-size: 16px;
+box-sizing: border-box;
+border-color: #F9F5EF;
 }
 
 .contact-form button {
