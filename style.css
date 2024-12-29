@@ -298,14 +298,11 @@ h2 {
     }
 }
 .button-center {
-    display: flex; /* Enable flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Make the container the height of the viewport */
-    width: 100%; /* Ensure full width */
-    margin: 0; /* Reset any default margins */
-    padding: 0; /* Reset any default padding */
-    box-sizing: border-box; /* Include padding and border in the element's dimensions */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically align the content (optional) */
+    margin-top: 20px; /* Add spacing above the button */
+    width: 100%; /* Ensure it spans the full width */
 }
 .btn.btn-dark {
     background-color: #404040; /* Sets the background color */
