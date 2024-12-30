@@ -85,6 +85,10 @@ function updateFileName() {
     fileName.textContent = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
 }
 
+    function toggleMenu() {
+        const nav = document.querySelector('.navigation');
+        nav.classList.toggle('active');
+    }
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent default form submission
