@@ -15,34 +15,57 @@
 <body>
     <!-- Хедер -->
     <header>
-        <!-- Логотип -->
-        <img src="Group 1-5.svg" alt="Логотип">
-        <div class="burger-menu" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- Логотип -->
+    <img src="Group 1-5.svg" alt="Логотип" class="logo">
+    
+    <nav class="menu">
+        <a href="#services">Услуги</a>
+        <a href="#faq">Отзывы</a>
+        <a href="#reviews">Блог</a>
+        <a href="#contact">Контакты</a>
+        
+        <!-- Кнопка для рассчета стоимости -->
+        <button class="calculate-button" onclick="location.href='mailto:contact@valeriiatranslator.com?subject=Рассчитать стоимость'">
+            Рассчитать стоимость
+        </button>
+
+        <!-- Переключатель языка -->
+        <div class="language-switcher">
+            <a href="#" class="current-lang" onclick="toggleDropdown(event)" aria-haspopup="true" aria-expanded="false">
+                RU
+            </a>
+            <ul class="dropdown" id="languageDropdown" role="menu">
+                <li><a href="?lang=en" role="menuitem">EN</a></li>
+            </ul>
         </div>
-        <!-- Меню навигации -->
-        <nav>
-            <a href="#services">Услуги</a>
-            <a href="#faq">Отзывы</a>
-            <a href="#reviews">Блог</a>
-            <a href="#contact">Контакты</a>   
-            <button class="calculate-button" onclick="location.href='mailto:contact@valeriiatranslator.com?subject=Рассчитать стоимость'">
-    Рассчитать стоимость
-</button>
+    </nav>
+    
+    <!-- Бургерное меню для мобильных устройств -->
+    <div class="burger-menu">
+        <div class="burger-bar"></div>
+        <div class="burger-bar"></div>
+        <div class="burger-bar"></div>
+    </div>
 
-            <div class="language-switcher" style = "margin-top: 10px;">
-    <a href="#" class="current-lang" onclick="toggleDropdown(event)" aria-haspopup="true" aria-expanded="false">
-        RU
-    </a>
-    <ul class="dropdown" id="languageDropdown" role="menu">
-        <li><a href="?lang=en" role="menuitem">EN</a></li>
-    </ul>
-</div>
-
-        </nav>
-    </header>
+    <!-- Мобильное меню -->
+    <nav class="mobile-menu">
+        <a href="#services">Услуги</a>
+        <a href="#faq">Отзывы</a>
+        <a href="#reviews">Блог</a>
+        <a href="#contact">Контакты</a>
+        <button class="calculate-button" onclick="location.href='mailto:contact@valeriiatranslator.com?subject=Рассчитать стоимость'">
+            Рассчитать стоимость
+        </button>
+        <div class="language-switcher">
+            <a href="#" class="current-lang" onclick="toggleDropdown(event)" aria-haspopup="true" aria-expanded="false">
+                RU
+            </a>
+            <ul class="dropdown" id="languageDropdown" role="menu">
+                <li><a href="?lang=en" role="menuitem">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
     <!-- Секция "Интро" -->
 <section id="intro" class="container">
