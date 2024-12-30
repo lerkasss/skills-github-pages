@@ -62,34 +62,41 @@ nav a:hover {
 .calculate-button:hover {
     background-color: #000;
 }
-/* Modal Background */
-/* Основные стили для модального окна */
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+/* Modal Background 
+/* Основные стили для модального окна 
 .modal {
-    display: none; /* Скрываем по умолчанию */
-    position: fixed; /* Фиксированное положение */
+    display: none; 
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100%; /* Полная ширина */
-    height: 100%; /* Полная высота */
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-    z-index: 9999; /* Уровень над остальными элементами */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999; 
 }
 
-/* Контейнер с содержимым модального окна */
+
 .modal-content {
     position: absolute;
-    top: 50%; /* Центрируем по вертикали */
-    left: 50%; /* Центрируем по горизонтали */
-    transform: translate(-50%, -50%); /* Сдвигаем на половину ширины и высоты */
-    background-color: #fff; /* Белый фон */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #fff; 
     padding: 20px;
-    border-radius: 10px; /* Скругленные углы */
-    width: 400px; /* Ширина окна */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Тень */
+    border-radius: 10px; 
+    width: 400px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
     text-align: center;
 }
 
-/* Кнопка закрытия */
+
 .close {
     position: absolute;
     top: 10px;
@@ -103,7 +110,7 @@ nav a:hover {
 
 
 
-/* Input Fields */
+
 .modal-content input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -113,7 +120,7 @@ nav a:hover {
     font-size: 14px;
 }
 
-/* Custom File Upload Button */
+
 .custom-file-button {
     display: inline-block;
     padding: 10px 20px;
@@ -127,7 +134,7 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-/* Submit Button */
+
 .custom-submit-button {
     display: inline-block;
     padding: 10px 20px;
@@ -140,7 +147,7 @@ nav a:hover {
     transition: background-color 0.3s ease;
 }
 
-
+*/
 
 /* Контейнер переключателя языков */
 .language-switcher {
@@ -172,7 +179,39 @@ nav a:hover {
     background-color: #f0f0f0; /* Подсветка при наведении */
 }
 
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 100px;
+    }
 
+    .burger-menu {
+        display: flex;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+}
 /* Основной контейнер */
 /* Добавить стили, если нужно изменить дефолтные настройки Bootstrap */
 .container {
