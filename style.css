@@ -68,11 +68,6 @@ nav.menu a:hover {
 }
 
 /* Language Switcher */
-.language-switcher {
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-}
 
 .language-switcher .current-lang {
     font-weight: bold;
@@ -82,8 +77,6 @@ nav.menu a:hover {
 .language-switcher .dropdown {
     display: none;
     position: absolute;
-    background-color: #FFF;
-    border: 1px solid #DDD;
     margin-top: 5px;
     list-style: none;
     padding: 0;
@@ -104,9 +97,6 @@ nav.menu a:hover {
     color: #333;
 }
 
-.language-switcher .dropdown li a:hover {
-    color: black;
-}
 
 /* Burger Menu */
 .burger-menu {
@@ -250,7 +240,6 @@ nav.menu a:hover {
 .language-switcher {
     position: relative; /* Positioning dropdown relative to RU */
     display: inline-block; /* Keeps RU and dropdown compact */
-    margin-top: 10px; /* Optional, adds spacing above the switcher */
 }
 
 .language-switcher .dropdown {
