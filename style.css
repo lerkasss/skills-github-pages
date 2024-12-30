@@ -63,40 +63,45 @@ nav a:hover {
     background-color: #000;
 }
 /* Modal Background */
+/* Основные стили для модального окна */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; /* Скрываем по умолчанию */
+    position: fixed; /* Фиксированное положение */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    z-index: 1000; /* Ensure it's above other elements */
-    backdrop-filter: blur(8px); /* Blurs the background */
-    justify-content: center; /* Centers modal horizontally */
-    align-items: center; /* Centers modal vertically */
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    z-index: 9999; /* Уровень над остальными элементами */
 }
 
-/* Modal Content Box */
+/* Контейнер с содержимым модального окна */
 .modal-content {
-    background-color: white; /* Modal background */
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвигаем на половину ширины и высоты */
+    background-color: #fff; /* Белый фон */
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    width: 90%; /* Responsive size */
-    max-width: 400px; /* Limit maximum width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align: center; /* Center text inside the modal */
+    border-radius: 10px; /* Скругленные углы */
+    width: 400px; /* Ширина окна */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Тень */
+    text-align: center;
 }
 
-/* Close Button */
+/* Кнопка закрытия */
 .close {
     position: absolute;
     top: 10px;
     right: 15px;
     font-size: 20px;
+    font-weight: bold;
     color: #000;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
+
+
 
 /* Input Fields */
 .modal-content input[type="email"] {
