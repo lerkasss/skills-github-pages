@@ -120,20 +120,21 @@
 </section>
 
 <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Рассчитать стоимость</h2>
-            <form id="costForm" method="post" enctype="multipart/form-data" action="mailto:your-email@example.com">
-                <label for="email">Ваш email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="file">Прикрепить файл:</label>
-                <input type="file" id="file" name="file" required>
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Рассчитать стоимость</h2>
+        <form id="costForm" method="post" enctype="multipart/form-data" action="mailto:your-email@example.com">
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="file">Прикрепить файл:</label>
+            <label for="fileInput" class="custom-file-button">Choose File</label>
+            <input type="file" id="fileInput" name="file" style="display: none;" required>
+            <button type="submit" class="custom-submit-button">Отправить</button>
+        </form>
     </div>
-    
+</div>
+  
 <!-- Секция "FAQ" -->
    <section id="faq" style="margin-left: 130px; display: flex; margin-right: 149px; padding-top: 30px;">
     <!-- Column 1 -->
