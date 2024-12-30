@@ -85,10 +85,18 @@ function updateFileName() {
     fileName.textContent = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
 }
 
-    function toggleMenu() {
-        const nav = document.querySelector('.navigation');
-        nav.classList.toggle('active');
-    }
+// Toggle the mobile menu visibility when burger icon is clicked
+document.querySelector('.burger-menu').addEventListener('click', function() {
+    document.querySelector('.mobile-menu').classList.toggle('active');
+});
+
+// Optional: Close the mobile menu if a link is clicked
+document.querySelectorAll('.mobile-menu a').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.remove('active');
+    });
+});
+
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent default form submission
