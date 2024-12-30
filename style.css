@@ -348,14 +348,9 @@ button {
     max-width: 1200px;
     margin: 0 auto;
 }
-.contact-info {
-    margin-top: 20px;
-}
-
 .icon-container {
     display: flex; /* Use Flexbox for horizontal layout */
     gap: 15px; /* Adds spacing between icons */
-    justify-content: center; /* Centers the icons horizontally */
     align-items: center; /* Aligns icons vertically */
 }
 
@@ -383,7 +378,9 @@ button {
 .icon-link:hover i {
     opacity: 0.7; /* Optional hover effect */
 }
-
+.contact-form {
+    margin-top: 20px;
+}
 .contact-info,
 .contact-form {
     flex: 1;
