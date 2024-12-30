@@ -580,10 +580,19 @@ button {
 
 /* Футер */
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #FFFFFF; /* Белый фон */
-    margin-top: 20px;
-    color: #333333;
-    font-size: 0.9rem;
+    background-color: #f8f9fa; /* Светлый фон */
+    padding: 20px 0;
+    font-size: 14px;
 }
+
+.footer-link {
+    color: #404040; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 5px;
+    transition: color 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.footer-link:hover {
+    color: #007BFF; /* Цвет при наведении */
+}
+
