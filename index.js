@@ -4,11 +4,22 @@ console.log("The script is working!");
 
 function toggleDropdown(event) {
     event.preventDefault();
-    const dropdown = document.getElementById("languageDropdown");
-    const isVisible = dropdown.style.display === "block";
-    // Скрыть или показать dropdown
-    dropdown.style.display = isVisible ? "none" : "block";
+    const dropdown = document.getElementById('languageDropdown');
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
 }
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function (event) {
+    const dropdown = document.getElementById('languageDropdown');
+    const switcher = document.querySelector('.language-switcher');
+    if (!switcher.contains(event.target)) {
+        dropdown.style.display = 'none';
+    }
+});
 
 
 
