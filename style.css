@@ -106,7 +106,7 @@ nav.menu a:hover {
     margin-right: 15px;
 }
 
-.burger-menu span {
+.burger-menu {
     width: 25px;
     height: 3px;
     background-color: black;
@@ -149,6 +149,7 @@ nav.menu a:hover {
 
     .burger-menu {
         display: flex; /* Show burger menu */
+        bor
     }
 
     .mobile-menu.active {
