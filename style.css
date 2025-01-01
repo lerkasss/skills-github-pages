@@ -141,7 +141,7 @@ nav.menu a:hover {
 
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 938px) {
     nav.menu {
         display: none; /* Hide desktop menu */
     }
@@ -154,7 +154,6 @@ header img {
     
     .burger-menu {
         display: flex; /* Show burger menu */
-        bor
     }
 
     .mobile-menu.active {
@@ -274,9 +273,9 @@ header img {
     transition: all 0.3s ease;
 }
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 938px) {
     .logo {
-        max-width: 100px;
+        max-width: 250px;
     }
 
     .burger-menu {
