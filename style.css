@@ -65,32 +65,60 @@ nav.menu a:hover {
 
 /* Language Switcher */
 
-.language-switcher .current-lang {
+.burger-language-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Стили для переключателя языка */
+.language-switcher {
+    position: relative;
+    font-size: 1rem;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .language-switcher .dropdown {
-    display: none;
     position: absolute;
-    margin-top: 5px;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    color: #333;
     list-style: none;
-    padding: 0;
-    z-index: 20;
-}
-
-.language-switcher:hover .dropdown {
-    display: block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 2000;
 }
 
 .language-switcher .dropdown li {
-    margin: 0;
-    padding: 5px 10px;
+    margin: 5px 0;
 }
 
 .language-switcher .dropdown li a {
     text-decoration: none;
     color: #333;
+}
+
+.language-switcher .dropdown li a:hover {
+    color: #000;
+}
+
+/* Активное состояние для раскрывающегося списка */
+.language-switcher[aria-expanded="true"] .dropdown {
+    display: block;
+}
+
+/* Медиа-запрос для мобильной версии */
+@media (max-width: 938px) {
+    .burger-language-container {
+        gap: 10px;
+    }
+
+    .language-switcher {
+        font-size: 0.9rem;
+    }
 }
 
 
