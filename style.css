@@ -265,24 +265,6 @@ header img {
     display: inline-block; /* Keeps RU and dropdown compact */
 }
 
-.language-switcher .dropdown {
-    display: none; /* Initially hides the dropdown */
-    position: absolute; /* Position dropdown relative to the parent */
-    right: 0; /* Align to the right edge of the switcher */
-    margin-top: -10px; /* Fine-tune vertical alignment */
-    list-style: none; /* Remove bullets from the list */
-}
-
-.language-switcher .dropdown li a {
-    color: #404040;
-    text-decoration: none;
-    display: block;
-}
-
-.language-switcher .current-lang:hover {
-    background-color: #f0f0f0; /* Подсветка при наведении */
-}
-
 .burger-menu span {
     width: 25px;
     height: 3px;
@@ -291,31 +273,7 @@ header img {
     transition: all 0.3s ease;
 }
 /* Responsive Design */
-@media (max-width: 938px) {
-    .logo {
-        min-width: 150px;
-    }
 
-    .burger-menu {
-        display: flex;
-    }
-
-    .navigation {
-        display: none;
-        flex-direction: column;
-        background-color: white;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .navigation.active {
-        display: flex;
-    }
-}
 /* Основной контейнер */
 /* Добавить стили, если нужно изменить дефолтные настройки Bootstrap */
 .container {
