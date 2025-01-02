@@ -321,6 +321,13 @@ header img {
 .container {
     background-color: #f9f9f9;
 }
+#features .feature-box {
+    border-right: 2px solid black; /* Add the separator line */
+}
+
+#features .feature-box:last-child {
+    border-right: none; /* Remove the line for the last box */
+}
 .text-justify {
     text-align: justify;
     width: 100%; /* Убедитесь, что текст занимает всю ширину */
