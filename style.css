@@ -223,6 +223,13 @@ header img {
     .mobile-menu.active {
         display: flex; /* Show mobile menu when active */
     }
+    .row.flex-column {
+        gap: 20px; /* Add spacing between rows */
+    }
+
+    .feature-box {
+        margin-bottom: 20px; /* Optional: Additional spacing */
+    }
 }
 
 /* Modal Background 
