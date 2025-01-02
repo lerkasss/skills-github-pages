@@ -3,16 +3,22 @@
 console.log("The script is working!");
 
 function toggleDropdown(event) {
-    event.preventDefault(); // Prevent the default anchor behavior
+    event.preventDefault(); // Остановить переход по ссылке
+
     const dropdown = document.getElementById('languageDropdown');
-    
-    // Toggle the "show" class to make the dropdown visible
-    dropdown.classList.toggle('show');
-    
-    // Toggle aria-expanded attribute
-    const isExpanded = dropdown.classList.contains('show');
-    event.target.setAttribute('aria-expanded', isExpanded);
+    const isVisible = dropdown.style.display === 'block';
+
+    // Переключаем видимость меню
+    if (isVisible) {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+
+    // Переключаем атрибут aria-expanded для доступности
+    event.target.setAttribute('aria-expanded', !isVisible);
 }
+
 
 
 // Close dropdown when clicking outside
