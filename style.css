@@ -227,7 +227,7 @@ header img {
         display: flex; /* Show mobile menu when active */
     }
     .row.flex-column {
-        gap: 20px; /* Add spacing between rows */
+        gap: 40px; /* Add spacing between rows */
     }
 
     .feature-box {
@@ -423,18 +423,19 @@ header img {
 
 /* features */
 #features .row {
-    margin: 0; /* Remove default margins from the row */
-    gap: 0; /* Ensure no additional space between columns */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #features .feature-box {
     padding: 0; /* Remove any internal padding */
     margin: 0; /* Remove extra margin between boxes */
-    border-right: 2px solid black; /* Add the separator line */
+    max-width:300px;
+    border-bottom: 2px solid black; /* Add the separator line */
 }
 
 #features .feature-box:last-child {
-    border-right: none; /* Remove the line for the last box */
+    border-bottom: none; /* Remove the line for the last box */
 }
 
 #features .feature-box .vertical-line {
