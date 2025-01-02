@@ -109,6 +109,7 @@ nav.menu a:hover {
     }
     .language-switcher {
         font-size: 1rem;
+        padding: 5px;
     }
     #languageDropdown {
     display: none; /* Hidden by default */
