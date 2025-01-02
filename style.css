@@ -234,6 +234,30 @@ header img {
         margin: 0 auto;
         display: block; /* Ensure the image is centered */
     }
+    /* features */
+#features .row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#features .feature-box {
+    padding: 0; /* Remove any internal padding */
+    margin: 0; /* Remove extra margin between boxes */
+    max-width:300px;
+    border-bottom: 2px solid black; /* Add the separator line */
+}
+
+#features .feature-box:last-child {
+    border-bottom: none; /* Remove the line for the last box */
+}
+
+#features .feature-box .vertical-line {
+    display: none; /* Remove the redundant vertical-line div */
+}
+
+#features .col-md-3 {
+    flex: 0 0 30%;
+}
     #faq {
         margin-left: 20px;
         margin-right: 20px;
@@ -431,30 +455,6 @@ header img {
     height: auto;
 }
 
-/* features */
-#features .row {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#features .feature-box {
-    padding: 0; /* Remove any internal padding */
-    margin: 0; /* Remove extra margin between boxes */
-    max-width:300px;
-    border-bottom: 2px solid black; /* Add the separator line */
-}
-
-#features .feature-box:last-child {
-    border-bottom: none; /* Remove the line for the last box */
-}
-
-#features .feature-box .vertical-line {
-    display: none; /* Remove the redundant vertical-line div */
-}
-
-#features .col-md-3 {
-    flex: 0 0 30%;
-}
 /*services*/
 h2 {
     font-family: 'Mplus 1p', sans-serif;
