@@ -285,7 +285,7 @@ header img {
 /* Responsive Design */
 @media (max-width: 938px) {
     .logo {
-        max-width: 250px;
+        min-width: 150px;
     }
 
     .burger-menu {
