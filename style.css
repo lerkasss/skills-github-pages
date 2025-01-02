@@ -110,6 +110,34 @@ nav.menu a:hover {
     .language-switcher {
         font-size: 0.9rem;
     }
+    #languageDropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+#languageDropdown.show {
+    display: block; /* Show when active */
+}
+
+#languageDropdown li {
+    padding: 5px 15px;
+}
+
+#languageDropdown li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+#languageDropdown li a:hover {
+    color: black;
+}
 }
 
 
