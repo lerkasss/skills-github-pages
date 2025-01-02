@@ -167,6 +167,7 @@ nav.menu a:hover {
 
 .burger-menu.active .burger-bar:nth-child(2) {
     opacity: 0;
+    transform: translateX(-100%);
 }
 
 .burger-menu.active .burger-bar:nth-child(3) {
