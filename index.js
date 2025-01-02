@@ -3,14 +3,17 @@
 console.log("The script is working!");
 
 function toggleDropdown(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent the default anchor behavior
     const dropdown = document.getElementById('languageDropdown');
-    if (dropdown.style.display === 'block') {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
+    
+    // Toggle the "show" class to make the dropdown visible
+    dropdown.classList.toggle('show');
+    
+    // Toggle aria-expanded attribute
+    const isExpanded = dropdown.classList.contains('show');
+    event.target.setAttribute('aria-expanded', isExpanded);
 }
+
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function (event) {
