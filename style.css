@@ -230,11 +230,26 @@ header img {
         gap: 40px; /* Add spacing between rows */
     }
 
-
-
     .row.align-items-stretch .col-md-6 img {
         margin: 0 auto;
         display: block; /* Ensure the image is centered */
+    }
+    #faq {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .faq-column {
+        flex-direction: row; /* Swap the columns */
+    }
+
+    .faq-title {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        margin-top: 0; /* Remove negative margin */
+    }
+
+    .faq-answers {
+        padding-left: 0; /* Reset padding */
     }
 }
 
