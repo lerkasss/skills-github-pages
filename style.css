@@ -78,19 +78,6 @@ nav.menu a:hover {
     font-weight: bold;
 }
 
-.language-switcher .dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background-color: #fff;
-    color: #333;
-    list-style: none;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    z-index: 2000;
-}
 
 .language-switcher .dropdown li {
     margin: 5px 0;
@@ -275,16 +262,11 @@ header img {
     position: absolute; /* Position dropdown relative to the parent */
     right: 0; /* Align to the right edge of the switcher */
     margin-top: -10px; /* Fine-tune vertical alignment */
-    margin-right: 25px; /* Adjust horizontal position if needed */
     list-style: none; /* Remove bullets from the list */
 }
 
-.language-switcher .dropdown li {
-    padding: 5px 10px;
-}
-
 .language-switcher .dropdown li a {
-    color: black;
+    color: #333333;
     text-decoration: none;
     display: block;
 }
