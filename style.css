@@ -219,6 +219,9 @@ header img {
     .burger-menu {
         display: flex; /* Show burger menu */
     }
+    .current-lang:hover{
+        background-color: #f5f5f5;
+    }
 
     .mobile-menu.active {
         display: flex; /* Show mobile menu when active */
