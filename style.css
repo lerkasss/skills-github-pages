@@ -230,12 +230,7 @@ header img {
         gap: 40px; /* Add spacing between rows */
     }
 
-    .feature-box {
-        margin-bottom: 20px; /* Optional: Additional spacing */
-    }
-    .row.align-items-stretch .col-md-6 p{
-        margin-bottom: 20px;
-    }
+
 
     .row.align-items-stretch .col-md-6 img {
         margin: 0 auto;
