@@ -225,6 +225,7 @@ header img {
     margin: 0; /* Remove extra margin between boxes */
     max-width:300px;
     border-bottom: 2px solid black; /* Add the separator line */
+     border-right: none;
 }
 
 #features .feature-box:last-child {
@@ -265,6 +266,24 @@ header img {
     display: inline-block; /* Keeps RU and dropdown compact */
 }
 
+.language-switcher .dropdown {
+    display: none; /* Initially hides the dropdown */
+    position: absolute; /* Position dropdown relative to the parent */
+    right: 0; /* Align to the right edge of the switcher */
+    margin-top: -10px; /* Fine-tune vertical alignment */
+    list-style: none; /* Remove bullets from the list */
+}
+
+.language-switcher .dropdown li a {
+    color: #404040;
+    text-decoration: none;
+    display: block;
+}
+
+.language-switcher .current-lang:hover {
+    background-color: #f0f0f0; /* Подсветка при наведении */
+}
+
 .burger-menu span {
     width: 25px;
     height: 3px;
@@ -272,14 +291,44 @@ header img {
     margin: 4px 0;
     transition: all 0.3s ease;
 }
+/* Responsive Design */
+@media (max-width: 938px) {
+    .logo {
+        min-width: 150px;
+    }
 
+    .burger-menu {
+        display: flex;
+    }
 
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+}
 /* Основной контейнер */
-
+/* Добавить стили, если нужно изменить дефолтные настройки Bootstrap */
 .container {
     background-color: #f9f9f9;
 }
+#features .feature-box {
+    border-right: 2px solid black; /* Add the separator line */
+}
 
+#features .feature-box:last-child {
+    border-right: none; /* Remove the line for the last box */
+}
 .text-justify {
     text-align: justify;
     width: 100%; /* Убедитесь, что текст занимает всю ширину */
@@ -678,4 +727,3 @@ footer {
 .footer-link:hover {
     color: #EA9478; /* Цвет при наведении */
 }
-
