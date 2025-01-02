@@ -215,7 +215,13 @@ header img {
     width: 100px;
     margin-left: 25px;
 }
-    
+    .text-justify p {
+    text-align: justify;
+    width: 100%; /* Убедитесь, что текст занимает всю ширину */
+    max-width: 450px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
     .burger-menu {
         display: flex; /* Show burger menu */
     }
@@ -231,7 +237,9 @@ header img {
     }
 
     .row.align-items-stretch .col-md-6 img {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
         display: block; /* Ensure the image is centered */
     }
     /* features */
