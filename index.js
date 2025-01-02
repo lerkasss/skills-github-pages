@@ -97,9 +97,17 @@ function updateFileName() {
 }
 
 // Toggle the mobile menu visibility when burger icon is clicked
-document.querySelector('.burger-menu').addEventListener('click', function() {
-    document.querySelector('.mobile-menu').classList.toggle('active');
-});
+document.querySelector('.burger-menu').addEventListener('click', toggleBurgerMenu);
+
+function toggleBurgerMenu() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    // Toggle active class on both elements
+    burgerMenu.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+}
+
 
 // Optional: Close the mobile menu if a link is clicked
 document.querySelectorAll('.mobile-menu a').forEach(item => {
