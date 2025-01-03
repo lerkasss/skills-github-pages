@@ -150,6 +150,67 @@ nav.menu a:hover {
         width: 100%; /* Изображение адаптируется */
     }
 }
+/* Общие стили */
+.content-section {
+    text-align: center; /* Центрируем содержимое */
+}
+
+.text-column h2 {
+    margin: 0 auto; /* Центрируем текст */
+    max-width: 500px; /* Ограничиваем ширину */
+    padding-left: 16px; /* Легкий отступ для эстетики */
+}
+
+.text-column ul {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем отступы */
+    margin: 20px auto; /* Центрируем и создаем вертикальный отступ */
+    max-width: 500px; /* Ограничиваем ширину */
+}
+
+.feature-img {
+    max-width: 100%; /* Изображение адаптивное */
+    height: auto; /* Сохраняем пропорции */
+}
+
+.button-center {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стили для больших экранов (компьютеры) */
+@media (min-width: 939px) {
+    .content-section {
+        text-align: left; /* Выравнивание для компьютеров */
+    }
+
+    .text-column h2 {
+        text-align: left; /* Текст выравнивается влево */
+    }
+
+    .text-column ul {
+        text-align: left; /* Список выравнивается влево */
+    }
+}
+
+/* Стили для телефонов (маленькие экраны) */
+@media (max-width: 938px) {
+    .content-section {
+        width: 85%; /* Ширина секции 85% экрана */
+        margin: 0 auto; /* Центрируем по горизонтали */
+    }
+
+    .feature-img {
+        margin-bottom: 10px; /* Отступ для кнопки */
+    }
+
+    .button-center button {
+        padding: 10px 20px;
+        border-radius: 7px;
+    }
+}
+
 /* Медиа-запрос для мобильной версии */
 @media (max-width: 938px) {
     .burger-language-container {
