@@ -465,11 +465,11 @@ margin-top: -30px;
     flex: 0 0 30%;
 }
     #faq {
-        display: flex;
-        flex-direction: column; /* Колонки превращаются в ряды */
-        margin-left: 0;
-        margin-right: 0;
-        min-width: 400px;
+        flex-direction: column;
+width: 75%;
+justify-content: center;
+align-items: center;
+margin-left: 75px !important;
     }
 
     .faq-column {
