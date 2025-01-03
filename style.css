@@ -98,6 +98,8 @@ nav.menu a:hover {
 }
 #mobileLanguageDropdown.visible {
     display: block;
+    margin-right: 5px;
+    font-size: 18px;
 }
 /* Медиа-запрос для мобильной версии */
 @media (max-width: 938px) {
@@ -107,11 +109,12 @@ nav.menu a:hover {
     }
     .current-lang{
         text-decoration: none;
-        color: #333333;
+        color: #404040;
+        font-size: 18px;
     }
     .language-switcher {
-        font-size: 1rem;
-        padding: 5px;
+        padding-top: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -413,7 +416,7 @@ margin-top: -30px;
     text-align: justify;
     width: 100%; /* Убедитесь, что текст занимает всю ширину */
     max-width: 450px;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
     margin-left: 30px;
     }
     .burger-menu {
@@ -466,7 +469,7 @@ margin-top: -30px;
         flex-direction: column; /* Колонки превращаются в ряды */
         margin-left: 0;
         margin-right: 0;
-        max-width: 400px;
+        min-width: 400px;
     }
 
     .faq-column {
