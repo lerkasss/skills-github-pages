@@ -116,7 +116,9 @@ nav.menu a:hover {
     max-width: 450px;
     margin: 20px 0;
 }
-
+.row align-items-stretch{
+    margin-bottom: -48px;
+}
 .calculate-button {
     background-color: #404040;
     color: #fff;
@@ -150,21 +152,19 @@ nav.menu a:hover {
 /* Общие стили */
 /* Общие стили */
 .content-section {
-    text-align: center; /* Центрируем содержимое */
-    margin: 0 auto; /* Центрируем секцию */
-    max-width: 85%; /* Ограничиваем ширину секции */
+    margin: 0 60px;
+    max-width: 1320px;
 }
 
 .text-column h2 {
-    margin: 0 auto 20px; /* Центрируем текст и добавляем отступ снизу */
-    max-width: 600px; /* Ограничиваем ширину заголовка */
-    text-align: left; /* Выравниваем текст влево */
-    font-size: 1.8rem; /* Размер текста */
+    margin: 0 10px;
+    max-width: 610px;
+    text-align: left;
+    font-size: 20px;
 }
 
 .text-column ul {
-    padding: 0; /* Убираем отступы */
-    margin: 20px auto; /* Центрируем и добавляем отступ */
+    margin: 20px 0; /* Центрируем и добавляем отступ */
     max-width: 600px; /* Ограничиваем ширину списка */
     text-align: left; /* Выравниваем текст влево */
 }
@@ -186,10 +186,6 @@ nav.menu a:hover {
 @media (min-width: 939px) {
     .content-section {
         text-align: left; /* Выравнивание для компьютеров */
-    }
-
-    .text-column h2 {
-        text-align: left; /* Текст выравнивается влево */
     }
 
     .text-column ul {
