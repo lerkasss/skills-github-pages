@@ -862,7 +862,9 @@ footer {
     background-color: #f8f9fa; /* Светлый фон */
     font-size: 14px;
 }
-
+.container text-center p{
+    font-size: 14px;
+}
 .footer-link {
     color: #404040; /* Цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
