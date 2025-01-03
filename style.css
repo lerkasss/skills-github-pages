@@ -148,31 +148,38 @@ nav.menu a:hover {
     }
 }
 /* Общие стили */
+/* Общие стили */
 .content-section {
     text-align: center; /* Центрируем содержимое */
+    margin: 0 auto; /* Центрируем секцию */
+    max-width: 85%; /* Ограничиваем ширину секции */
 }
 
 .text-column h2 {
-    margin: 0 auto; /* Центрируем текст */
-    max-width: 500px; /* Ограничиваем ширину */
-    padding-left: 16px; /* Легкий отступ для эстетики */
+    margin: 0 auto 20px; /* Центрируем текст и добавляем отступ снизу */
+    max-width: 600px; /* Ограничиваем ширину заголовка */
+    text-align: left; /* Выравниваем текст влево */
+    font-size: 1.8rem; /* Размер текста */
 }
 
 .text-column ul {
     padding: 0; /* Убираем отступы */
-    margin: 20px auto; /* Центрируем и создаем вертикальный отступ */
-    max-width: 550px; /* Ограничиваем ширину */
+    margin: 20px auto; /* Центрируем и добавляем отступ */
+    max-width: 600px; /* Ограничиваем ширину списка */
+    text-align: left; /* Выравниваем текст влево */
 }
 
 .feature-img {
-    max-width: 225px; /* Изображение адаптивное */
+    max-width: 100%; /* Изображение адаптивное */
     height: auto; /* Сохраняем пропорции */
+    max-height: 250px; /* Ограничиваем высоту изображения */
+    margin: 0 auto; /* Центрируем изображение */
 }
 
 .button-center {
-    margin-top: 20px;
+    margin-top: 20px; /* Отступ сверху */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Центрируем кнопку */
 }
 
 /* Стили для больших экранов (компьютеры) */
