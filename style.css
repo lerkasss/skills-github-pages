@@ -101,8 +101,8 @@ nav.menu a:hover {
     margin-right: 5px;
     font-size: 18px;
 }
-#intro {
-    padding: 30px 15px; /* Общий отступ */
+#languageDropdown.visible {
+    display: block;
 }
 
 .intro-text {
@@ -122,9 +122,6 @@ nav.menu a:hover {
     color: #fff;
 }
 @media (min-width: 939px) {
-    #intro {
-        padding: 60px;
-    }
 
     .intro-text p {
         margin-left: 60px;
