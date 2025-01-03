@@ -38,9 +38,8 @@ body {
         .card {
             flex: 1 1 calc(25% - 20px); /* 4 cards per row with gaps */
             max-width: calc(25% - 20px);
-            background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 15px;
             overflow: hidden;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
