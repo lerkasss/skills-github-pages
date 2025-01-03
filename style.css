@@ -464,8 +464,8 @@ margin-top: -30px;
     #intro{
         width:75%;
         text-align: justify;
-        margin-left: 0px !important;
-        margin-right: 0px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
         margin-bottom: 20px !important;
     }
   
