@@ -141,12 +141,12 @@ nav.menu a:hover {
     }
 
     .intro-text {
-        width: 85%; /* Занимает 75% ширины экрана */
+        width: 95%; /* Занимает 75% ширины экрана */
         margin: 0 auto; /* Центрируем */
     }
 
     .illustration {
-        width: 100%; /* Изображение адаптируется */
+        width: 80%; /* Изображение адаптируется */
     }
 }
 /* Общие стили */
@@ -172,9 +172,9 @@ nav.menu a:hover {
     margin-top: 0px !important;
 }
 .feature-img {
-    max-width: 100%; /* Изображение адаптивное */
+    max-width: 70%; /* Изображение адаптивное */
     height: auto; /* Сохраняем пропорции */
-    max-height: 250px; /* Ограничиваем высоту изображения */
+    max-height: 200px; /* Ограничиваем высоту изображения */
     margin: 0 auto; /* Центрируем изображение */
 }
 
@@ -581,7 +581,6 @@ margin-top: -30px;
 width: 75%;
 justify-content: center;
 align-items: center;
-margin-left: 75px !important;
     }
 
     .faq-column {
@@ -854,6 +853,13 @@ button {
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
+    }
+    .contact-info h2{
+        font-size: 20px;
+    }
+    .container text-center p{
+    font-size: 12px;
+    white-space: pre-wrap;
     }
 }
 
