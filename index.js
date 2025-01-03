@@ -3,21 +3,26 @@
 console.log("The script is working!");
 
 function toggleDropdown(event) {
-    event.preventDefault(); // Остановить переход по ссылке
-
+    event.preventDefault(); // Prevent default behavior
     const dropdown = document.getElementById('languageDropdown');
-    const isVisible = dropdown.style.display === 'block';
-
-    // Переключаем видимость меню
-    if (isVisible) {
-        dropdown.style.display = 'none';
-    } else {
-        dropdown.style.display = 'block';
-    }
-
-    // Переключаем атрибут aria-expanded для доступности
-    event.target.setAttribute('aria-expanded', !isVisible);
+    toggleVisibility(dropdown, event.target);
 }
+
+function toggleMobileDropdown(event) {
+    event.preventDefault(); // Prevent default behavior
+    const dropdown = document.getElementById('mobileLanguageDropdown');
+    toggleVisibility(dropdown, event.target);
+}
+
+function toggleVisibility(dropdown, trigger) {
+    // Toggle visibility
+    dropdown.classList.toggle('visible');
+
+    // Update aria-expanded attribute
+    const isExpanded = dropdown.classList.contains('visible');
+    trigger.setAttribute('aria-expanded', isExpanded);
+}
+
 
 
 
