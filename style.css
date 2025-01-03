@@ -412,13 +412,14 @@ margin-top: -30px;
     width: 100px;
     margin-left: 25px;
     }
-    .text-justify p {
-    text-align: justify;
-    width: 100%; /* Убедитесь, что текст занимает всю ширину */
-    max-width: 450px;
-    margin-bottom: 20px !important;
-    margin-left: 30px;
+    #intro{
+        width:75%;
+        text-align: justify;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 20px !important;
     }
+  
     .burger-menu {
         display: flex; /* Show burger menu */
     }
