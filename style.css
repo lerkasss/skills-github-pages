@@ -541,6 +541,7 @@ margin-top: -30px;
 
     .mobile-menu.active {
         display: flex; /* Show mobile menu when active */
+        padding-top: 30%;
     }
     .row.flex-column {
         gap: 40px; /* Add spacing between rows */
