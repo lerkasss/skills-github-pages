@@ -101,6 +101,55 @@ nav.menu a:hover {
     margin-right: 5px;
     font-size: 18px;
 }
+#intro {
+    padding: 30px 15px; /* Общий отступ */
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.intro-text p {
+    max-width: 450px;
+    margin: 20px 0;
+}
+
+.calculate-button {
+    background-color: #404040;
+    color: #fff;
+}
+@media (min-width: 939px) {
+    #intro {
+        padding: 60px;
+    }
+
+    .intro-text p {
+        margin-left: 60px;
+    }
+
+    .calculate-button {
+        margin-left: 60px;
+    }
+}
+
+/* Стили для телефонов (маленькие экраны) */
+@media (max-width: 938px) {
+    #intro {
+        padding: 15px; /* Уменьшаем отступ */
+    }
+
+    .intro-text {
+        width: 75%; /* Занимает 75% ширины экрана */
+        margin: 0 auto; /* Центрируем */
+    }
+
+    .illustration {
+        width: 100%; /* Изображение адаптируется */
+    }
+}
 /* Медиа-запрос для мобильной версии */
 @media (max-width: 938px) {
     .burger-language-container {
