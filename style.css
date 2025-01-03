@@ -168,7 +168,9 @@ nav.menu a:hover {
     max-width: 600px; /* Ограничиваем ширину списка */
     text-align: left; /* Выравниваем текст влево */
 }
-
+.d-flex justify-content-center my-5 {
+    margin-top: 0px !important;
+}
 .feature-img {
     max-width: 100%; /* Изображение адаптивное */
     height: auto; /* Сохраняем пропорции */
