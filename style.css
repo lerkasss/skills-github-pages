@@ -159,14 +159,13 @@ nav.menu a:hover {
 }
 
 .text-column ul {
-    list-style-type: none; /* Убираем стандартные маркеры */
     padding: 0; /* Убираем отступы */
     margin: 20px auto; /* Центрируем и создаем вертикальный отступ */
-    max-width: 500px; /* Ограничиваем ширину */
+    max-width: 550px; /* Ограничиваем ширину */
 }
 
 .feature-img {
-    max-width: 100%; /* Изображение адаптивное */
+    max-width: 225px; /* Изображение адаптивное */
     height: auto; /* Сохраняем пропорции */
 }
 
