@@ -240,12 +240,14 @@ nav.menu a:hover {
 .container {
     background-color: #f9f9f9;
 }
+@media (min-width: 938px) {
 #features .feature-box {
-    border-bottom: 2px solid black; /* Add the separator line */
+    border-right: 2px solid black; /* Add the separator line */
 }
 
 #features .feature-box:last-child {
-    border-bottom: none; /* Remove the line for the last box */
+    border-right: none; /* Remove the line for the last box */
+}
 }
 .text-justify {
     text-align: justify;
