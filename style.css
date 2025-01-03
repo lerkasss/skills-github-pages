@@ -96,7 +96,9 @@ nav.menu a:hover {
 .language-switcher[aria-expanded="true"] .dropdown {
     display: block;
 }
-
+#mobileLanguageDropdown.visible {
+    display: block;
+}
 /* Медиа-запрос для мобильной версии */
 @media (max-width: 938px) {
     .burger-language-container {
