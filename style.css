@@ -265,7 +265,7 @@ nav.menu a:hover {
 
 /* Mobile Menu */
 .mobile-menu {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -274,7 +274,7 @@ nav.menu a:hover {
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     transform: translateY(-100%);
     transition: transform 0.3s ease;
@@ -335,6 +335,14 @@ nav.menu a:hover {
         display: flex;
     }
 
+    .mobile-menu .calculate-button {
+        position: absolute; /* Абсолютное позиционирование */
+        bottom: 20px; /* Кнопка внизу экрана */
+        left: 50%; /* Центрируем по горизонтали */
+        transform: translateX(-50%); /* Сдвигаем кнопку для выравнивания */
+        width: 90%; /* Растягиваем кнопку по ширине */
+        max-width: 300px; /* Ограничиваем максимальную ширину */
+    }
     .navigation {
         display: none;
         flex-direction: column;
