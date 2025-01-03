@@ -18,6 +18,7 @@ header {
     padding: 10px 20px;
     position: relative;
     z-index: 10;
+    width: 100%;
 }
 
 header img {
