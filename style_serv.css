@@ -1,71 +1,69 @@
 body {
-            font-family: 'M PLUS 1p', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F8F8F8; /* Светло-серый */
-            color: #333333; /* Темно-серый текст */
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    font-family: 'M PLUS 1p', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Светло-серый */
+    color: #333333; /* Темно-серый текст */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        h1 {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-        }
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
 
-        .section {
-            width: 80%;
-            margin: auto;
-        }
+.section {
+    width: 80%;
+    margin: auto;
+}
 
-        .section h2 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            text-align: left;
-        }
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
 
-        .cards {
+.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    justify-content: center; /* Centers the cards when there's extra space */
+    justify-content: center; /* Центрирование карточек */
 }
 
 .card {
-    flex: 1 1 calc(25% - 25px); /* 4 cards per row with gaps */
+    flex: 1 1 calc(25% - 25px); /* 4 карточки в строке с учётом промежутков */
     max-width: calc(25% - 25px);
     border: 1px solid #ddd;
     border-radius: 15px;
     overflow: hidden;
-    text-align: center;
+    text-align: left; /* Выравнивание текста по левому краю */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Ensures content stacks vertically */
-    justify-content: flex-start; /* Keeps the content aligned at the top */
-    align-items: center;
-    height: 300px; /* Sets a fixed height for all cards */
+    flex-direction: column; /* Контент располагается вертикально */
+    justify-content: flex-start; /* Контент сверху */
+    height: 300px; /* Фиксированная высота для карточек */
+    padding: 15px; /* Внутренние отступы */
 }
 
 .card img {
-
-max-height: 150px;
-object-fit: cover;
-max-width: 150px;
-margin-bottom: 20px;
+    max-height: 150px;
+    object-fit: cover;
+    width: 100%; /* Изображение занимает всю ширину карточки */
+    margin-bottom: 15px; /* Расстояние между изображением и текстом */
+    border-radius: 10px; /* Сглаживание углов */
 }
 
 .card .text {
-    padding: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-flex-grow: 1;
-max-height: 90px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание текста по левому краю */
 }
 
 .card .text p:first-child {
@@ -97,11 +95,11 @@ max-height: 90px;
     .card {
         flex: 1 1 100%;
         max-width: 100%;
-        height: auto; /* Remove fixed height for smaller screens */
+        height: auto; /* Удаляем фиксированную высоту для маленьких экранов */
     }
 
     .card img {
-        height: auto; /* Maintain aspect ratio for images */
-        max-height: 150px;
+        max-height: 150px; /* Поддержание соотношения сторон изображения */
+        width: auto;
     }
 }
