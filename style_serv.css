@@ -52,21 +52,20 @@ body {
 }
 
 .card img {
-    width: auto;
-    height: auto;
-    max-width: 100px; /* Максимальная ширина окна для картинки */
-    max-height: 150px; /* Максимальная высота окна для картинки */
-    object-fit: contain; /* Вписывает изображение, сохраняя пропорции */
-    margin: auto; /* Центрирует изображение внутри окна */
+
+max-height: 150px;
+object-fit: cover;
+max-width: 150px;
+margin-bottom: 20px;
 }
 
 .card .text {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-grow: 1; /* Fills available vertical space */
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-grow: 1;
+max-height: 90px;
 }
 
 .card .text p:first-child {
