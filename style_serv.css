@@ -30,63 +30,76 @@ body {
         }
 
         .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: space-between;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center; /* Centers the cards when there's extra space */
+}
 
-        .card {
-            flex: 1 1 calc(25% - 25px); /* 4 cards per row with gaps */
-            max-width: calc(25% - 25px);
-            border: 1px solid #ddd;
-            border-radius: 15px;
-            overflow: hidden;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            justify-content: center;
-            align-items:center;
-        }
+.card {
+    flex: 1 1 calc(25% - 25px); /* 4 cards per row with gaps */
+    max-width: calc(25% - 25px);
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ensures content stacks vertically */
+    justify-content: flex-start; /* Keeps the content aligned at the top */
+    align-items: center;
+    height: 300px; /* Sets a fixed height for all cards */
+}
 
-        .card img {
-            width: 60%;
-            height: auto;
-            object-fit: cover;
-            max-height: 150px;
-        }
+.card img {
+    width: 100%; /* Ensures images fill the card width */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images are cropped proportionally */
+}
 
-        .card .text {
-            padding: 10px;
-        }
+.card .text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1; /* Fills available vertical space */
+}
 
-        .card .text p:first-child {
-            margin: 0;
-            font-size: 14px;
-            color: #555;
-        }
+.card .text p:first-child {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
 
-        .card .text p:last-child {
-            margin: 5px 0 0;
-            font-size: 16px;
-            font-weight: bold;
-        }
+.card .text p:last-child {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+}
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 28px;
-            }
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
 
-            .section h2 {
-                text-align: center;
-            }
+    .section h2 {
+        text-align: center;
+    }
 
-            .cards {
-                flex-direction: column;
-                align-items: center;
-            }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .card {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
-        }
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        height: auto; /* Remove fixed height for smaller screens */
+    }
+
+    .card img {
+        height: auto; /* Maintain aspect ratio for images */
+        max-height: 150px;
+    }
+}
