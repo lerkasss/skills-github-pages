@@ -52,9 +52,12 @@ body {
 }
 
 .card img {
-    width: 100%; /* Ensures images fill the card width */
-    height: 150px; /* Fixed height for images */
-    object-fit: cover; /* Ensures images are cropped proportionally */
+    width: auto;
+    height: auto;
+    max-width: 100px; /* Максимальная ширина окна для картинки */
+    max-height: 150px; /* Максимальная высота окна для картинки */
+    object-fit: contain; /* Вписывает изображение, сохраняя пропорции */
+    margin: auto; /* Центрирует изображение внутри окна */
 }
 
 .card .text {
