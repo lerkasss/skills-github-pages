@@ -77,7 +77,7 @@
         <div class="col-md-6 intro-text">
             <p class="text-justify">Профессиональный перевод документов и языковая поддержка для иммиграции, судебных дел, бизнеса и повседневных задач.</p>
             <p class="text-justify"><strong>Отправьте материал для бесплатной оценки стоимости прямо сейчас!</strong></p>
-            <button class="calculate-button1" onclick="location.href='mailto:contact@valeriiatranslator.com?subject=Рассчитать стоимость'">
+            <button class="calculate-button" onclick="location.href='mailto:contact@valeriiatranslator.com?subject=Рассчитать стоимость'">
             Рассчитать стоимость
         </button>
         </div>
@@ -375,14 +375,15 @@
                 <textarea id="question" name="question" placeholder="Вопрос" required></textarea>
                 <div>
         <div style="display: flex; align-items: center;">
-    <input 
+    
+    <label for="consent" style="margin: 0;">
+        <input 
         type="checkbox" 
         id="consent" 
         name="consent" 
         required 
         style="margin-right: 10px;" 
-    >
-    <label for="consent" style="margin: 0;">
+        >
         Я согласен(на) с <a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> и обработкой моих персональных данных.
     </label>
 </div>
