@@ -49,6 +49,7 @@ h1 {
     justify-content: flex-start; /* Контент сверху */
     height: 300px; /* Фиксированная высота для карточек */
     padding: 15px; /* Внутренние отступы */
+    text-aligh: center;
 }
 
 .card img {
