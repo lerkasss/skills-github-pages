@@ -12,18 +12,19 @@ body {
 
         h1 {
             margin-top: 20px;
+            margin-bottom: 20px;
             text-align: center;
             font-size: 36px;
             font-weight: bold;
         }
 
         .section {
-            width: 80%;
+            width: 70%;
             margin: auto;
         }
 
         .section h2 {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 20px;
             text-align: left;
         }
