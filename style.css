@@ -847,8 +847,11 @@ button {
     transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #000;
+.consent-label input[type="checkbox"] {
+    width: 18px; /* Adjust the width as desired */
+    height: 18px; /* Set height to match width */
+    margin: 0;
+    cursor: pointer;
 }
 
 /* Responsive Design */
@@ -862,6 +865,9 @@ button {
     .container text-center p{
     font-size: 12px;
     white-space: pre-wrap;
+    }
+    .consent-label {
+        flex-wrap: wrap;
     }
 }
 
