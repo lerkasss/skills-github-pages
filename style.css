@@ -352,6 +352,9 @@ nav.menu a:hover {
 .container {
     background-color: #f9f9f9;
 }
+.calculate-button{
+    margin-left: 60px;
+}
 @media (min-width: 938px) {
 #features .feature-box {
     border-right: 2px solid black; /* Add the separator line */
