@@ -865,59 +865,84 @@ button {
     white-space: pre-wrap;
     }
 }
-/* General Styles */
+/* General form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Consent container */
 .consent-container {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
+/* Checkbox styling */
 .consent-container input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
     appearance: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
     background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
 }
 
 .consent-container input[type="checkbox"]:checked {
     background-color: #007BFF;
     border-color: #007BFF;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 5px;
-    left: 5px;
-    background-color: #fff;
+    content: '✔';
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
 }
 
+/* Label styling */
 .consent-container label {
-    margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: normal;
     line-height: 1.5;
+    margin: 0;
 }
 
+/* Link styling */
 .consent-container a {
     text-decoration: underline;
     color: #007BFF;
 }
 
-/* Mobile Styles */
-@media (max-width: 938px) {
+/* Button styling */
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
     .consent-container {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .consent-container input[type="checkbox"] {
-        margin-bottom: 10px;
     }
 }
 
