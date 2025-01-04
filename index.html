@@ -379,12 +379,18 @@
                 <textarea id="question" name="question" placeholder="Вопрос" required></textarea>
                 <div>
         <div class="consent-container">
-    <input type="checkbox" id="consent" name="consent" required>
-    <label for="consent">
-        Я согласен(на) с 
-        <a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> 
-        и обработкой моих персональных данных.
-    </label>
+    <form>
+    <div class="consent-container">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">
+            Я согласен(на) с 
+            <a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a> 
+            и обработкой моих персональных данных.
+        </label>
+    </div>
+    <button type="submit" class="submit-button">Отправить</button>
+</form>
+
 </div>
 
 </div>
