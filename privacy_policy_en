@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav a{
+            font-size: 20px;
+            font-weight: bold;
+            color: #404040;
+            margin-right: 5%;
+            text-decoration: none;
+        }
+
+        main {
+            width: 90%;
+            margin: auto auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
+        <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index_en.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Privacy Policy</h1>
+        <p>This Privacy Policy outlines the process of collecting, processing, and protecting personal data provided by users of the translator's services (hereinafter referred to as "Translator").</p>
+        
+        <section>
+            <h2>1. General Provisions</h2>
+            <p>This policy is developed in accordance with applicable law and is aimed at protecting the rights of users who provide their personal data.</p>
+            <p>By using my services, you agree to the terms of this policy.</p>
+        </section>
+
+        <section>
+            <h2>2. Collection and Use of Data</h2>
+            <p>I may request and collect the following personal data:</p>
+            <ul>
+                <li>Full name;</li>
+                <li>Contact information (phone, email address);</li>
+                <li>Documents and materials provided for translation;</li>
+                <li>Other data necessary for the provision of services.</li>
+            </ul>
+            <p>The data is used exclusively for the provision of translation services and interaction with you.</p>
+        </section>
+
+        <section>
+            <h2>3. Data Storage and Protection</h2>
+            <p>Your data is stored in secure electronic systems, to which only I have access. I take measures to prevent data loss, theft, or unauthorized access.</p>
+            <p>The data storage period is limited to 30 calendar days, after which the data is deleted.</p>
+        </section>
+
+        <section>
+            <h2>4. Data Transfer to Third Parties</h2>
+            <p>Your personal data will not be transferred to third parties without your consent, except in cases provided by law (for example, by court order).</p>
+        </section>
+
+        <section>
+            <h2>5. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Request information about your personal data that I process;</li>
+                <li>Request correction or deletion of your data;</li>
+                <li>Withdraw consent to data processing at any time.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Contact Information</h2>
+            <p>If you have any questions or wish to exercise your rights, you can contact me:</p>
+            <p>Email: <a href="mailto:contact@valeriiatranslator.com">contact@valeriiatranslator.com</a></p>
+            <p>Phone: +1 (213) 548-1099</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Valeriia Soldatchenkova. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
