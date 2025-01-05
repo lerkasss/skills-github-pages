@@ -83,10 +83,6 @@ text-align: center;
 margin: 10px;
 }
 
-.calculate-button1{
-    margin: 30px;
-}
-
 @media (max-width: 938px) {
     h1 {
         font-size: 28px;
