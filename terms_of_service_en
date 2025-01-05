@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav a {
+            font-size: 20px;
+            font-weight: bold;
+            color: #404040;
+            margin-right: 5%;
+            text-decoration: none;
+        }
+
+        main {
+            width: 90%;
+            margin: auto auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Terms of Service</h1>
+        <p>This Terms of Service agreement (hereinafter referred to as "Agreement") regulates the relationship between the translator (hereinafter referred to as "Translator") and the user of the Translator's services (hereinafter referred to as "Client").</p>
+        
+        <section>
+            <h2>1. General Provisions</h2>
+            <p>By using the Translator's services, the Client confirms that they have read and agree to the terms of this Agreement.</p>
+            <p>The Translator reserves the right to make changes to this Agreement. Changes take effect from the moment they are published.</p>
+        </section>
+
+        <section>
+            <h2>2. Services</h2>
+            <p>The Translator provides document translation, text translation, and other language support services.</p>
+            <p>Service descriptions, costs, and deadlines are discussed individually and confirmed in correspondence between the Translator and the Client.</p>
+        </section>
+
+        <section>
+            <h2>3. Responsibilities of the Parties</h2>
+            <h3>Responsibilities of the Translator:</h3>
+            <ul>
+                <li>Provide services in accordance with agreements and within the agreed timeframe;</li>
+                <li>Ensure the confidentiality of the materials provided by the Client;</li>
+                <li>Inform the Client about the progress of the order if necessary.</li>
+            </ul>
+            
+            <h3>Responsibilities of the User:</h3>
+            <ul>
+                <li>Provide accurate and complete source materials for translation;</li>
+                <li>Pay for services within the agreed deadlines;</li>
+                <li>Comply with the terms of this Agreement.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Payment</h2>
+            <p>The cost of services is determined based on the volume and complexity of the work. Payment terms are agreed upon before the order is carried out.</p>
+            <p>If payment is delayed, the Translator has the right to suspend the completion of the order.</p>
+        </section>
+
+        <section>
+            <h2>5. Liability</h2>
+            <p>The Translator is not responsible for:</p>
+            <ul>
+                <li>Errors or inaccuracies in the materials provided by the Client;</li>
+                <li>Use of translated materials by third parties without the Client's consent.</li>
+            </ul>
+            <p>The Client is responsible for timely payment for services and compliance with the conditions for providing materials.</p>
+        </section>
+
+        <section>
+            <h2>6. Confidentiality</h2>
+            <p>The Translator agrees to maintain the confidentiality of all data provided by the Client. More details can be found in the <a href="privacy-policy_en.html">Privacy Policy</a>.</p>
+        </section>
+
+        <section>
+            <h2>7. Dispute Resolution</h2>
+            <p>All disputes and disagreements arising in connection with the performance of this Agreement shall be resolved through negotiations. If no agreement is reached, the dispute shall be subject to judicial review in accordance with the law.</p>
+        </section>
+
+        <section>
+            <h2>8. Contact Information</h2>
+            <p>Translator: Valeriia Soldatchenkova</p>
+            <p>Email: <a href="mailto:contact@valeriiatranslator.com">contact@valeriiatranslator.com</a></p>
+            <p>Phone: +1 (213) 548-1099</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Valeriia Soldatchenkova. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
