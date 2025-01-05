@@ -92,7 +92,9 @@ margin: 10px;
     h1 {
         font-size: 28px;
     }
-
+.calculate-button1 {
+    margin-left: 0px;
+}
     .section h2 {
         text-align: center;
     }
