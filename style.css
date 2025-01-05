@@ -144,6 +144,9 @@ nav.menu a:hover {
     .illustration {
         width: 80%; /* Изображение адаптируется */
     }
+    .calculate-button {
+    margin-left: 0px;
+}
 }
 /* Общие стили */
 /* Общие стили */
