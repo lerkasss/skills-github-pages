@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $question = htmlspecialchars($_POST['question']);
 
     // Адрес почты, на который будет отправлено письмо
-    $to = "your-email@example.com";
+    $to = "contact@valeriiatranslator.com";
     
     // Тема письма
     $subject = "Новый контактный запрос от $name";
