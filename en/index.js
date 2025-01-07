@@ -9,16 +9,22 @@ function toggleDropdown(event) {
 }
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent form from submitting normally
     
-    const form = new FormData(this);
+    // Initialize EmailJS with your public key
+    emailjs.init('pBVvmCp2qljtiqkI1'); 
+
+    const form = document.getElementById('contactForm'); // Reference to the form
+
     emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
         .then(function(response) {
             alert('Message sent successfully!');
+            form.reset(); // Reset the form after successful submission
         }, function(error) {
-            alert('Error: ' + error);
+            alert('Error sending message: ' + error.text);
         });
 });
+
 
 function toggleMobileDropdown(event) {
     event.preventDefault(); // Prevent default behavior
