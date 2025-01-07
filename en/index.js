@@ -7,20 +7,24 @@ function toggleDropdown(event) {
     const dropdown = document.getElementById('languageDropdown');
     toggleVisibility(dropdown, event.target);
 }
-emailjs.init('pBVvmCp2qljtiqkI1'); 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-    // Initialize EmailJS with your public key
-    
-    const form = document.getElementById('contactForm'); // Reference to the form
 
-    emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
-        .then(function(response) {
-            alert('Message sent successfully!');
-            form.reset(); // Reset the form after successful submission
-        }, function(error) {
-            alert('Error sending message: ' + error.text);
-        });
+// Initialize EmailJS with your User ID
+emailjs.init('pBVvmCp2qljtiqkI1');  // Replace 'YOUR_USER_ID' with your actual User ID from EmailJS
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();  // Prevent the default form submission
+
+  const form = new FormData(this);  // Create FormData from the form
+
+  // Send form data to EmailJS
+  emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
+    .then(function(response) {
+      console.log('Success!', response);
+      alert('Message sent successfully!');
+    }, function(error) {
+      console.log('Error:', error);
+      alert('Error: ' + error);
+    });
 });
 
 
