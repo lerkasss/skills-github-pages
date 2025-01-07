@@ -8,6 +8,19 @@ function toggleDropdown(event) {
     toggleVisibility(dropdown, event.target);
 }
 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const form = new FormData(this);
+    emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
+        .then(function(response) {
+            alert('Message sent successfully!');
+        }, function(error) {
+            alert('Error: ' + error);
+        });
+});
+
+
 function toggleMobileDropdown(event) {
     event.preventDefault(); // Prevent default behavior
     const dropdown = document.getElementById('mobileLanguageDropdown');
