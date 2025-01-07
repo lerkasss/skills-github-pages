@@ -315,7 +315,7 @@
     <div class="contact-container">
         <!-- Contact Information Column -->
         <div class="contact-info">
-            <h2>Контактная информация</h2>
+            <h2>Contact Information</h2>
             <p>Email: contact@valeriiatranslator.com</p>
             <p>Phone: +1 (213) 548-1099</p>
             <p>
@@ -334,21 +334,22 @@
         </div>
         <!-- Contact Form Column -->
         <div class="contact-form">
-            <h2>Contact</h2>
-        <form id="contactForm">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+    <h2>Contact</h2>
+    <form id="contactForm" action="send_email.php" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="phone">Phone number (optional)</label>
-            <input type="tel" id="phone" name="phone">
+        <label for="phone">Phone number (optional)</label>
+        <input type="tel" id="phone" name="phone">
 
-            <label for="question">Вопрос</label>
-            <textarea id="question" name="question" placeholder="Question" required></textarea>
-                <div style="display: flex; align-items: center;">
-                <label for="consent" style="margin: 0;">
+        <label for="question">Question</label>
+        <textarea id="question" name="question" placeholder="Question" required></textarea>
+
+        <div style="display: flex; align-items: center;">
+            <label for="consent" style="margin: 0;">
                 <input 
                 type="checkbox" 
                 id="consent" 
@@ -356,11 +357,14 @@
                 required 
                 style="width: 20px; height: 20px; margin: 0; vertical-align: middle;" 
                 >
-            I agree with the <a href="https://valeriiatranslator.com/privacy_policy_en/" target="_blank">privacy policy</a> and the processing of my personal data.    </label>
-</div>
+                I agree with the <a href="https://valeriiatranslator.com/privacy_policy_en/" target="_blank">privacy policy</a> and the processing of my personal data.
+            </label>
+        </div>
+
         <button type="submit" style="margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">Send</button>
-            
-     </form>
+    </form>
+</div>
+
             </div>
         </div>
 </section>
