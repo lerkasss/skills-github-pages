@@ -7,13 +7,11 @@ function toggleDropdown(event) {
     const dropdown = document.getElementById('languageDropdown');
     toggleVisibility(dropdown, event.target);
 }
-
+emailjs.init('pBVvmCp2qljtiqkI1'); 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting normally
-    
     // Initialize EmailJS with your public key
-    emailjs.init('pBVvmCp2qljtiqkI1'); 
-
+    
     const form = document.getElementById('contactForm'); // Reference to the form
 
     emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
