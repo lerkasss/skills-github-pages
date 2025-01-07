@@ -1,34 +1,32 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получаем данные из формы
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $question = htmlspecialchars($_POST['question']);
+    // Sanitize input
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $phone = htmlspecialchars(trim($_POST['phone']));
+    $question = htmlspecialchars(trim($_POST['question']));
 
-    // Адрес почты, на который будет отправлено письмо
-    $to = "soldatchenkova.valeriya@gmail.com";
-    
-    // Тема письма
-    $subject = "Новый контактный запрос от $name";
+    // Check if all required fields are filled
+    if (!empty($name) && !empty($email) && !empty($question)) {
+        // Email settings
+        $to = "contact@valeriiatranslator.com"; // Replace with your email
+        $subject = "New Contact Form Submission";
+        $message = "Name: $name\n";
+        $message .= "Email: $email\n";
+        $message .= "Phone: $phone\n";
+        $message .= "Question: $question\n";
+        $headers = "From: $email";
 
-    // Тело письма
-    $message = "
-    Имя: $name\n
-    Email: $email\n
-    Телефон: $phone\n
-    Вопрос: $question
-    ";
-
-    // Заголовки письма
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // Отправка письма
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Сообщение успешно отправлено!";
+        // Send email
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Message sent successfully!";
+        } else {
+            echo "Failed to send the message. Please try again.";
+        }
     } else {
-        echo "Ошибка при отправке сообщения.";
+        echo "Please fill in all required fields.";
     }
+} else {
+    echo "Invalid request method.";
 }
 ?>
