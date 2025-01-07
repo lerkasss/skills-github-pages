@@ -8,23 +8,28 @@ function toggleDropdown(event) {
     toggleVisibility(dropdown, event.target);
 }
 
-// Initialize EmailJS with your User ID
-emailjs.init('pBVvmCp2qljtiqkI1');  // Replace 'YOUR_USER_ID' with your actual User ID from EmailJS
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init('pBVvmCp2qljtiqkI1');  // Initialize EmailJS
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();  // Prevent the default form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent the default form submission
 
-  const form = new FormData(this);  // Create FormData from the form
+      const form = new FormData(this);  // Create FormData from the form
 
-  // Send form data to EmailJS
-  emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
-    .then(function(response) {
-      console.log('Success!', response);
-      alert('Message sent successfully!');
-    }, function(error) {
-      console.log('Error:', error);
-      alert('Error: ' + error);
+      // Send form data to EmailJS
+      emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
+        .then(function(response) {
+          console.log('Success!', response);
+          alert('Message sent successfully!');
+        }, function(error) {
+          console.log('Error:', error);
+          alert('Error: ' + error);
+        });
     });
+  } else {
+    console.log('EmailJS is not loaded correctly');
+  }
 });
 
 
