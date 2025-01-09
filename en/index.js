@@ -7,11 +7,15 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   try {
     // Send data to Google Apps Script
-    const response = await fetch('https://script.google.com/macros/s/AKfycbyiZD_xVnCmYvg04S2btdtnt6NU5Phyd7E6q-hITCikUHbaUvhW_3cAFer9T83DbPsuMg/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzA837y0koU9Pt97fUbSeFXk-egN2KmlKrBGtT2b_PdsOYLZNp3dQeDBtvRhuy52AHy/exec', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: { 'Content-Type': 'application/json' }
     });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
 
     const result = await response.json();
 
@@ -25,6 +29,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     alert('An error occurred: ' + error.message);
   }
 });
+
 
 // Toggle dropdown for language switcher
 console.log("The script is working!");
