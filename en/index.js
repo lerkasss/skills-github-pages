@@ -8,28 +8,29 @@ function toggleDropdown(event) {
     toggleVisibility(dropdown, event.target);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  if (typeof emailjs !== 'undefined') {
-    emailjs.init('pBVvmCp2qljtiqkI1');  // Initialize EmailJS
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();  // Prevent the default form submission
+    const form = new FormData(event.target);
+    const formData = Object.fromEntries(form.entries());
 
-      const form = new FormData(this);  // Create FormData from the form
-
-      // Send form data to EmailJS
-      emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', form)
-        .then(function(response) {
-          console.log('Success!', response);
-          alert('Message sent successfully!');
-        }, function(error) {
-          console.log('Error:', error);
-          alert('Error: ' + error);
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzQpSj-G7djxWLlCo9uvaw4iyMrxbIlB3TOOiuPj2fI5AfscXNtE4zbmaMJvKKPHaaGzg/exec', { // Replace with the Web App URL
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: { 'Content-Type': 'application/json' }
         });
-    });
-  } else {
-    console.log('EmailJS is not loaded correctly');
-  }
+
+        const result = await response.json();
+
+        if (result.status === 'success') {
+            alert('Message sent successfully!');
+        } else {
+            alert('Error: ' + result.message);
+        }
+    } catch (error) {
+        alert('An error occurred: ' + error.message);
+    }
 });
 
 
