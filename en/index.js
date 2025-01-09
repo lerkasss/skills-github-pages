@@ -1,24 +1,3 @@
-// Add your EmailJS service, template, and user ID here
-const serviceID = 'service_wrfi07t'; // Replace with your EmailJS service ID
-const templateID = 'template_kewbrfz'; // Replace with your EmailJS template ID
-const userID = 'pBVvmCp2qljtiqkI1'; // Replace with your EmailJS user ID
-emailjs.init('pBVvmCp2qljtiqkI1');
-
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-
-  const form = new FormData(event.target);
-  const formData = Object.fromEntries(form.entries());
-
-  // Send email via EmailJS
-  emailjs.send(serviceID, templateID, formData, userID)
-    .then(function(response) {
-      alert('Message sent successfully!');
-      document.getElementById('contactForm').reset(); // Clear the form fields
-    }, function(error) {
-      alert('Error: ' + error.text);
-    });
-});
 
 
 
