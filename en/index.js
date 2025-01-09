@@ -1,34 +1,24 @@
-// Form submission with email sending (Google Apps Script)
-document.getElementById('contactForm').addEventListener('submit', async function(event) {
+// Add your EmailJS service, template, and user ID here
+const serviceID = 'service_wrfi07t'; // Replace with your EmailJS service ID
+const templateID = 'template_kewbrfz'; // Replace with your EmailJS template ID
+const userID = 'pBVvmCp2qljtiqkI1'; // Replace with your EmailJS user ID
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
 
   const form = new FormData(event.target);
   const formData = Object.fromEntries(form.entries());
 
-  try {
-    // Send data to Google Apps Script
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzA837y0koU9Pt97fUbSeFXk-egN2KmlKrBGtT2b_PdsOYLZNp3dQeDBtvRhuy52AHy/exec', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: { 'Content-Type': 'application/json' }
-    });
-
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    const result = await response.json();
-
-    if (result.status === 'success') {
+  // Send email via EmailJS
+  emailjs.send(serviceID, templateID, formData, userID)
+    .then(function(response) {
       alert('Message sent successfully!');
-      this.reset(); // Clear the form fields after successful submission
-    } else {
-      alert('Error: ' + result.message);
-    }
-  } catch (error) {
-    alert('An error occurred: ' + error.message);
-  }
+      document.getElementById('contactForm').reset(); // Clear the form fields
+    }, function(error) {
+      alert('Error: ' + error.text);
+    });
 });
+
 
 
 // Toggle dropdown for language switcher
