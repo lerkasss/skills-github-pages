@@ -7,7 +7,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   try {
     // Send data to Google Apps Script
-    const response = await fetch('https://script.google.com/macros/s/AKfycbyP596QNPltxvcT72o1ZyzlGklqn3CA4M_z3vJo2XksgOcXO7nf_7kL7wlioZ5cCAswIA/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbxGQDHDuf0UMJwBXOhH8bH0htvYauGSnNswnrNCIBDonOHX4ncO3A_0S6Ts81kPgouyaA/exec', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: { 'Content-Type': 'application/json' }
