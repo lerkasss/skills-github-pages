@@ -368,6 +368,27 @@
         </div>
 </section>
 <script src="index.js"></script>
+<script type="text/javascript">
+  emailjs.init('pBVvmCp2qljtiqkI1');  // Initialize with your User ID
+
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    const formData = new FormData(event.target);
+    const formObject = Object.fromEntries(formData.entries()); // Convert form data to an object
+
+    // Send email via EmailJS
+    emailjs.send('service_wrfi07t', 'template_kewbrfz', formObject)
+      .then(function(response) {
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset(); // Reset form fields
+      })
+      .catch(function(error) {
+        alert('Error: ' + error.text);
+      });
+  });
+</script>
+
     <!-- Футер -->
 <footer>
     <div class="container text-center">
