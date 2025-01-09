@@ -9,29 +9,32 @@ function toggleDropdown(event) {
 }
 
 document.getElementById('contactForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const form = new FormData(event.target);
-    const formData = Object.fromEntries(form.entries());
+  const form = new FormData(event.target);
+  const formData = Object.fromEntries(form.entries());
 
-    try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzQpSj-G7djxWLlCo9uvaw4iyMrxbIlB3TOOiuPj2fI5AfscXNtE4zbmaMJvKKPHaaGzg/exec', { // Replace with the Web App URL
-            method: 'POST',
-            body: JSON.stringify(formData),
-            headers: { 'Content-Type': 'application/json' }
-        });
+  try {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzQpSj-G7djxWLlCo9uvaw4iyMrxbIlB3TOOiuPj2fI5AfscXNtE4zbmaMJvKKPHaaGzg/exec', {
+      method: 'POST', // Ensure this is POST
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
 
-        const result = await response.json();
+    const result = await response.json();
 
-        if (result.status === 'success') {
-            alert('Message sent successfully!');
-        } else {
-            alert('Error: ' + result.message);
-        }
-    } catch (error) {
-        alert('An error occurred: ' + error.message);
+    if (result.status === 'success') {
+      alert('Message sent successfully!');
+    } else {
+      alert('Error: ' + result.message);
     }
+  } catch (error) {
+    alert('An error occurred: ' + error.message);
+  }
 });
+
 
 
 function toggleMobileDropdown(event) {
