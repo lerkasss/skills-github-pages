@@ -378,20 +378,32 @@
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
 
-        // Call EmailJS API to send the email
-        emailjs.send("service_wrfi07t", "template_kewbrfz", {
-            to_name: "Recipient Name",
-            from_name: "Sender Name",
-            message: "This is a test message."
-        })
-        .then(function(response) {
-            console.log("Success!", response.status, response.text); // Log success response
-            alert("Message sent successfully!");
-        }, function(error) {
-            console.log("Failed...", error); // Log error response
-            alert("Failed to send message. Please try again.");
-        });
+    // Collect form data
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const question = document.getElementById('question').value;
+
+    // Log the data to verify
+    console.log("Sending data:", { name, phone, email, question });
+
+    // Send form data using EmailJS
+    emailjs.send("service_wrfi07t", "template_kewbrfz", {
+      name: name,
+      phone: phone,
+      email: email,
+      question: question
+    })
+    .then(function(response) {
+      console.log("Success!", response.status, response.text);
+      alert("Message sent successfully!");
+      document.getElementById('contactForm').reset(); // Reset form after successful submission
+    })
+    .catch(function(error) {
+      console.log("Failed...", error);
+      alert("Failed to send message. Please try again.");
     });
+  });
 </script>
 
 
