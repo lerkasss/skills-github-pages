@@ -377,14 +377,16 @@
         <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
-
-        emailjs.sendForm('service_wrfi07t', 'template_kewbrfz', this)
-            .then(function() {
-                alert('Сообщение успешно отправлено!');
-            }, function(error) {
-                alert('Ошибка: ' + JSON.stringify(error));
-            });
-    });
+emailjs.send("service_wrfi07t", "template_kewbrfz", {
+  to_name: "Recipient Name",
+  from_name: "Sender Name",
+  message: "This is a test message."
+})
+.then(function(response) {
+  console.log("Success!", response.status, response.text);
+}, function(error) {
+  console.log("Failed...", error);
+});
 </script>
 
 
