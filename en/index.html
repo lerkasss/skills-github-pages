@@ -376,34 +376,24 @@
 <script src="index.js"></script>
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); // Отключаем стандартное поведение отправки формы
 
-    // Collect form data
-    const name = document.getElementById('name').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const question = document.getElementById('question').value;
+        // Собираем данные из формы
+        const formData = {
+            name: document.getElementById('name').value, // Имя отправителя
+            email: document.getElementById('email').value, // Email отправителя
+            message: document.getElementById('message').value // Сообщение
+        };
 
-    // Log the data to verify
-    console.log("Sending data:", { name, phone, email, question });
-
-    // Send form data using EmailJS
-    emailjs.send("service_wrfi07t", "template_kewbrfz", {
-      name: name,
-      phone: phone,
-      email: email,
-      question: question
-    })
-    .then(function(response) {
-      console.log("Success!", response.status, response.text);
-      alert("Message sent successfully!");
-      document.getElementById('contactForm').reset(); // Reset form after successful submission
-    })
-    .catch(function(error) {
-      console.log("Failed...", error);
-      alert("Failed to send message. Please try again.");
+        // Отправляем данные через EmailJS
+        emailjs.send('service_wrfi07t', 'template_kewbrfz', formData)
+            .then(function() {
+                alert('Сообщение успешно отправлено!');
+                document.getElementById('contactForm').reset(); // Очистка формы после отправки
+            }, function(error) {
+                alert('Ошибка при отправке: ' + JSON.stringify(error)); // Выводим ошибку, если что-то пошло не так
+            });
     });
-  });
 </script>
 
 
