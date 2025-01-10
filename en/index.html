@@ -391,11 +391,11 @@ console.log(formData); // Выводим данные в консоль для �
     emailjs.send('service_wrfi07t', 'template_kewbrfz', formData)
         .then(function(response) {
             console.log('Успех:', response);
-            alert('Сообщение успешно отправлено!');
+            alert('Question sent successfully!');
             document.getElementById('contactForm').reset(); // Очистка формы после отправки
         }, function(error) {
-            console.error('Ошибка при отправке:', error);
-            alert('Ошибка при отправке: ' + JSON.stringify(error)); // Выводим ошибку, если что-то пошло не так
+            console.error('Error while sending:', error);
+            alert('Error while sending: ' + JSON.stringify(error)); // Выводим ошибку, если что-то пошло не так
         });
     });
 </script>
