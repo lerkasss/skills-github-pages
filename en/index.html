@@ -385,15 +385,18 @@
             phone: document.getElementById('phone').value, // phone отправителя
             question: document.getElementById('question').value // Сообщение
         };
+console.log(formData); // Выводим данные в консоль для проверки
 
-        // Отправляем данные через EmailJS
-        emailjs.send('service_wrfi07t', 'template_kewbrfz', formData)
-            .then(function() {
-                alert('Сообщение успешно отправлено!');
-                document.getElementById('contactForm').reset(); // Очистка формы после отправки
-            }, function(error) {
-                alert('Ошибка при отправке: ' + JSON.stringify(error)); // Выводим ошибку, если что-то пошло не так
-            });
+    // Отправляем данные через EmailJS
+    emailjs.send('service_wrfi07t', 'template_kewbrfz', formData)
+        .then(function(response) {
+            console.log('Успех:', response);
+            alert('Сообщение успешно отправлено!');
+            document.getElementById('contactForm').reset(); // Очистка формы после отправки
+        }, function(error) {
+            console.error('Ошибка при отправке:', error);
+            alert('Ошибка при отправке: ' + JSON.stringify(error)); // Выводим ошибку, если что-то пошло не так
+        });
     });
 </script>
 
