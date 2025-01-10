@@ -4,10 +4,19 @@
 // Toggle dropdown for language switcher
 console.log("The script is working!");
 
-function toggleDropdown(event) {
-  event.preventDefault(); // Prevent default behavior
-  const dropdown = document.getElementById('languageDropdown');
-  toggleVisibility(dropdown, event.target);
+function toggleMobileDropdown(event) {
+    event.preventDefault(); // Prevent default behavior
+    const dropdown = document.getElementById('mobileLanguageDropdown');
+    toggleVisibility(dropdown, event.target);
+}
+
+function toggleVisibility(dropdown, trigger) {
+    // Toggle visibility
+    dropdown.classList.toggle('visible');
+
+    // Update aria-expanded attribute
+    const isExpanded = dropdown.classList.contains('visible');
+    trigger.setAttribute('aria-expanded', isExpanded);
 }
 
 // Toggle the mobile menu visibility when burger icon is clicked
