@@ -8,8 +8,18 @@ function toggleDropdown(event) {
     toggleVisibility(dropdown, event.target);
 }
 
+function convertToSmartQuotes(reviews) {
+    return reviews
+        .replace(/"([^"]*)"/g, '“$1”') // Replace straight double quotes
+        .replace(/'([^']*)'/g, '‘$1’'); // Replace straight single quotes
+}
 
-
+document.addEventListener('DOMContentLoaded', () => {
+    const element = document.querySelector('#reviews'); // Adjust this selector to target the right element(s)
+    if (element) {
+        element.innerHTML = convertToSmartQuotes(element.innerHTML);
+    }
+});
 
 function toggleMobileDropdown(event) {
     event.preventDefault(); // Prevent default behavior
