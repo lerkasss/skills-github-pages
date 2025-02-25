@@ -390,8 +390,8 @@
         <label for="phone">Номер телефона (необязательно)</label>
         <input type="tel" id="phone" name="phone">
 
-        <label for="question">Вопрос</label>
-        <textarea id="question" name="question" placeholder="Вопрос" required></textarea>
+        <label for="question">Вопрос (продублируйте Ваши контактные данные)</label>
+        <textarea id="question" name="question" placeholder="Вопрос (продублируйте Ваши контактные данные)" required></textarea>
 
         <div style="display: flex; align-items: center;">
             <label for="consent" style="margin: 0;">
@@ -428,17 +428,23 @@
             phone: document.getElementById('phone').value, // phone отправителя
             question: document.getElementById('question').value // Сообщение
         };
-console.log(formData); // Выводим данные в консоль для проверки
+console.log("Form Data to be Sent:", formData); // Debugging: Check if form data is correct
 
-    // Отправляем данные через EmailJS
+    // Check if email and phone exist in formData
+    if (!formData.email || !formData.phone) {
+        console.error("Email or phone is missing!");
+    }
+
+    // Send email using EmailJS
     emailjs.send('service_wrfi07t', 'template_kewbrfz', formData)
         .then(function(response) {
-            console.log('Успех:', response);
-            alert('Вопрос успешно отправлен!');
-            document.getElementById('contactForm').reset(); // Очистка формы после отправки
-        }, function(error) {
-            console.error('Ошибка при отправке:', error);
-            alert('Ошибка при отправке: ' + JSON.stringify(error)); // Выводим ошибку, если что-то пошло не так
+            console.log('Success:', response);
+            alert('Your message has been sent successfully!');
+            document.getElementById('contactForm').reset(); // Clear the form after sending
+        })
+        .catch(function(error) {
+            console.error('Error sending email:', error);
+            alert('Error sending message: ' + JSON.stringify(error));
         });
     });
 </script>
