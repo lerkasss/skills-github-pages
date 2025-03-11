@@ -1,0 +1,812 @@
+/* Общие стили */
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Светло-серый */
+    color: #333333; /* Темно-серый текст */
+    line-height: 1.6;
+}
+
+/* Хедер */
+/* Header Styling */
+header {
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+    margin-left: 25px;
+}
+
+/* Desktop Navigation Menu */
+nav.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 15px;
+}
+
+nav.menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav.menu a:hover {
+    color: black;
+}
+
+/* Calculate Button Styling */
+.calculate-button {
+    background-color: #404040;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Language Switcher */
+
+.burger-language-container {
+    display: none;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Стили для переключателя языка */
+.language-switcher {
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.language-switcher .dropdown li {
+    margin: 5px 0;
+}
+
+.language-switcher .dropdown li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.language-switcher .dropdown li a:hover {
+    color: #000;
+}
+
+/* Активное состояние для раскрывающегося списка */
+.language-switcher[aria-expanded="true"] .dropdown {
+    display: block;
+}
+#mobileLanguageDropdown.visible {
+    display: block;
+    margin-right: 5px;
+    font-size: 18px;
+}
+#languageDropdown.visible {
+    display: block;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 640px;
+}
+
+.illustration {
+    max-width: 450px; /* Limits the image width */
+    border-radius: 15px; /* Rounds the corners */
+}
+
+.intro-text p {
+    max-width: 450px;
+    margin: 20px 0;
+}
+.row align-items-stretch{
+    margin-bottom: -48px;
+}
+.calculate-button {
+    background-color: #404040;
+    color: #fff;
+}
+@media (min-width: 939px) {
+
+    .intro-text p {
+        margin-left: 60px;
+    }
+}
+
+/* Стили для телефонов (маленькие экраны) */
+@media (max-width: 938px) {
+    #intro {
+        padding: 5px; /* Уменьшаем отступ */
+    }
+
+    .intro-text {
+        width: 95%; /* Занимает 75% ширины экрана */
+        margin: 0 auto; /* Центрируем */
+    }
+
+    .illustration {
+        width: 80%; /* Изображение адаптируется */
+    }
+}
+/* Общие стили */
+/* Общие стили */
+.content-section {
+    margin: 0 60px;
+    max-width: 1320px;
+}
+
+.text-column h2 {
+    margin: 0 10px;
+    max-width: 610px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.text-column ul {
+    margin: 20px 0; /* Центрируем и добавляем отступ */
+    max-width: 600px; /* Ограничиваем ширину списка */
+    text-align: left; /* Выравниваем текст влево */
+}
+.d-flex justify-content-center my-5 {
+    margin-top: 0px !important;
+}
+.feature-img {
+    max-width: 70%; /* Изображение адаптивное */
+    height: auto; /* Сохраняем пропорции */
+    max-height: 200px; /* Ограничиваем высоту изображения */
+    margin: 0 auto; /* Центрируем изображение */
+}
+
+.button-center {
+    margin-top: 20px; /* Отступ сверху */
+    display: flex;
+    justify-content: center; /* Центрируем кнопку */
+}
+
+/* Стили для больших экранов (компьютеры) */
+@media (min-width: 939px) {
+    .content-section {
+        text-align: left; /* Выравнивание для компьютеров */
+    }
+
+    .text-column ul {
+        text-align: left; /* Список выравнивается влево */
+    }
+}
+
+/* Стили для телефонов (маленькие экраны) */
+@media (max-width: 938px) {
+    .content-section {
+        width: 85%; /* Ширина секции 85% экрана */
+        margin: 0 auto; /* Центрируем по горизонтали */
+    }
+
+    .feature-img {
+        margin-bottom: 10px; /* Отступ для кнопки */
+    }
+
+    .button-center button {
+        border-radius: 7px;
+    }
+}
+
+/* Медиа-запрос для мобильной версии */
+@media (max-width: 938px) {
+    .burger-language-container {
+        display: flex;
+        gap: 10px;
+    }
+    .current-lang{
+        text-decoration: none;
+        color: #404040;
+        font-size: 18px;
+    }
+    .language-switcher {
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+}
+
+
+/* Burger Menu */
+.burger-menu {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 30px; /* Width of the menu icon */
+    height: 20px; /* Height of the menu icon */
+    z-index: 1001; /* Ensure it appears above other elements */
+}
+
+.burger-bar {
+    display: block;
+    width: 100%;
+    height: 3px; /* Thickness of each bar */
+    background-color: #404040; /* Color of the menu bars */
+    transition: all 0.3s ease; /* Add smooth transitions for animation */
+}
+
+/* Активное состояние бургерного меню */
+.burger-menu.active .burger-bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.burger-menu.active .burger-bar:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.burger-menu.active .burger-bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F8F8F8; /* Затемнённый фон */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+.mobile-menu a {
+    color: #404040;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+
+
+
+
+/* Контейнер переключателя языков */
+.language-switcher {
+    position: relative; /* Positioning dropdown relative to RU */
+    display: inline-block; /* Keeps RU and dropdown compact */
+}
+
+.language-switcher .dropdown {
+    display: none; /* Initially hides the dropdown */
+    position: absolute; /* Position dropdown relative to the parent */
+    right: 0; /* Align to the right edge of the switcher */
+    margin-top: -10px; /* Fine-tune vertical alignment */
+    list-style: none; /* Remove bullets from the list */
+}
+
+.language-switcher .dropdown li a {
+    color: #404040;
+    text-decoration: none;
+    display: block;
+}
+
+.language-switcher .current-lang:hover {
+    background-color: #f0f0f0; /* Подсветка при наведении */
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+/* Responsive Design */
+
+@media (max-width: 938px) {
+    .logo {
+        min-width: 150px;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+  
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+}
+/* Основной контейнер */
+/* Добавить стили, если нужно изменить дефолтные настройки Bootstrap */
+.container {
+    background-color: #f9f9f9;
+    margin-top:5%;
+    margin-right:0%;
+    margin-bottom:5%;
+}
+.calculate-button{
+    margin-left: 60px;
+}
+
+h3 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 2%;
+}
+h2 {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+.top-margin-100 {
+    margin-top: 100px !important;
+    padding-toop: 50px;
+}
+
+
+/* General section styling */
+/* Общий стиль секции */
+#reviews {
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Контейнер с отзыва */
+.reviews-container {
+    display: flex;
+    gap: 10px; /* Расстояние между карточками */
+    overflow: hidden;
+    padding: 10px;
+    white-space: nowrap; /* Предотвращает разрыв строк в контейнере */
+    align-items: flex-start; /* Выравнивание карточек и имён авторов */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+/* Стиль карточки отзыва */
+.review-card {
+    padding: 10px;
+    max-width: 350px; /* Максимальная ширина карточки */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word; /* Позволяет тексту переходить на новую строку */
+    overflow-wrap: break-word; /* Обеспечивает перенос длинных слов */
+    width: 100%; /* Карточка будет растягиваться до максимальной ширины */
+}
+
+/* Стиль текста отзыва */
+.review-content p {
+     background-color: #f9f9f9; /* Light background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 5px; /* Margin below the element */
+    padding: 10px; /* Optional: Add padding inside the element for content spacing */
+    font-size: 14px;
+    color: #333;
+    text-align: justify; /* Выравнивание текста по ширине */
+    word-wrap: break-word; /* Позволяет тексту переходить на новую строку */
+    overflow-wrap: break-word; /* Обеспечивает перенос длинных слов */
+    white-space: normal; /* Разрешает перенос строк */
+    quotes: "“" "”" "‘" "’";
+}
+
+
+/* Mobile-specific styles */
+/* Responsive Styles */
+@media (max-width: 938px) {
+    nav.menu {
+        display: none; /* Hide desktop menu */
+    }
+
+    header img {
+    height: 80px;
+    width: 100px;
+    margin-left: 25px;
+    }
+    #intro{
+        width:75%;
+        text-align: justify;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 20px !important;
+    }
+  
+    .burger-menu {
+        display: flex; /* Show burger menu */
+    }
+    .current-lang:hover{
+        background-color: #f5f5f5;
+    }
+    .calculate-button {
+    margin-left: 0px;
+}
+    .mobile-menu.active {
+        display: flex; /* Show mobile menu when active */
+        padding-top: 30%;
+    }
+    .row.flex-column {
+        gap: 40px; /* Add spacing between rows */
+    }
+
+    .row.align-items-stretch .col-md-6 img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        display: block; /* Ensure the image is centered */
+    }
+    /* features */
+#features .row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#features .feature-box {
+    padding: 0; /* Remove any internal padding */
+    margin: 0; /* Remove extra margin between boxes */
+    max-width:300px;
+    border-bottom: 2px solid black; /* Add the separator line */
+    border-right: none;
+}
+
+#features .feature-box:last-child {
+    border-bottom: none; /* Remove the line for the last box */
+}
+
+#features .feature-box .vertical-line {
+    display: none; /* Remove the redundant vertical-line div */
+}
+
+#features .col-md-3 {
+    flex: 0 0 30%;
+}
+    #faq {
+        flex-direction: column;
+width: 75%;
+justify-content: center;
+align-items: center;
+    }
+
+    .faq-column {
+        width: 100%; /* Устанавливаем ширину колонок на 100% */
+    }
+
+    .faq-title {
+        font-size: 40px; /* Уменьшаем размер шрифта */
+        margin-top: 0; /* Убираем отрицательный отступ */
+    }
+
+    .faq-answers {
+        padding-left: 0; /* Убираем отступ */
+    }
+}
+
+@media (max-width: 768px) {
+    #reviews {
+        overflow: hidden;
+        width: 100%;
+    }
+
+
+    .reviews-container {
+        display: flex;
+        flex-direction: row; /* Horizontal layout for swiping */
+        gap: 20px;
+        width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-behavior: smooth;
+        transition: transform 0.3s ease; /* Smooth transition on swipe */
+    }
+
+    .review-card {
+        flex: 0 0 calc(100% - 40px); /* Full width with padding for mobile */
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+
+
+
+    .reviews-page {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Full width for each page */
+        gap: 0;
+    }
+
+ 
+
+    .review-card .review-text {
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .review-card .author-name {
+        margin-top: 10px;
+        align-self: flex-start;
+    }
+}
+
+
+    .review-card {
+        width: calc(100% / 3 - 10px); /* Three cards in a row */
+    }
+}
+.btn.btn-dark {
+    background-color: #404040; /* Цвет фона */
+    color: white; /* Цвет текста */
+    font-size: 1rem; /* Размер шрифта */
+    font-weight: bold; /* Полужирный шрифт */
+    border: none; /* Убираем границы */
+    cursor: pointer; /* Курсор-указатель */
+    transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.btn-dark {
+    background-color: #404040; /* Цвет фона */
+    color: white; /* Цвет текста */
+    font-size: 1rem; /* Размер шрифта */
+    font-weight: bold; /* Полужирный шрифт */
+    border: none; /* Убираем границы */
+    cursor: pointer; /* Курсор-указатель */
+    transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+
+/* Стили для кнопки */
+button {
+    background-color: #404040;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Одна колонка на узких экранах */
+    }
+}
+#contact {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.contact-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.icon-container {
+    display: flex; /* Use Flexbox for horizontal layout */
+    gap: 15px; /* Adds spacing between icons */
+    align-items: center; /* Aligns icons vertically */
+}
+
+.icon-link {
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures each icon acts like a block */
+}
+
+.icon-link i {
+    font-size: 30px; /* Adjust icon size */
+}
+
+.icon-link .fa-telegram {
+    color: #0088cc; /* Telegram color */
+}
+
+.icon-link .fa-facebook {
+    color: #1877f2; /* Facebook color */
+}
+
+.icon-link .fa-whatsapp {
+    color: #25d366; /* WhatsApp color */
+}
+
+.icon-link:hover i {
+    opacity: 0.7; /* Optional hover effect */
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px;
+    font-weight:bold;
+}
+
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #F9F5EF; /* Ensures a consistent border */
+    box-shadow: none; /* Removes any inner shadow */
+    outline: none; /* Removes focus outline for consistency */
+    background-color: #ffffff; /* Sets a clean background color */
+}
+.contact-form .input button{    
+    background-color: #404040;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+    text-align: center; /* Center text inside the button */
+    transition: background-color 0.3s ease;
+}
+
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #F9F5EF; /* Ensures a consistent border */
+    box-shadow: none; /* Removes any inner shadow */
+    outline: none; /* Removes focus outline for consistency */
+    background-color: #ffffff; /* Sets a clean background color */
+}
+/* Custom File Input Button Styles */
+.custom-file-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F8F8F8; /* Button background color */
+    color: #000; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.custom-file-button:hover {
+    background-color: #F4F4F4; /* Darker shade on hover */
+}
+
+/* File name display */
+#fileName {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #EA9478;
+}
+
+.contact-form button {
+    background-color: #404040;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+    text-align: center; /* Center text inside the button */
+    transition: background-color 0.3s ease;
+}
+
+.consent-label input[type="checkbox"] {
+    width: 18px; /* Adjust the width as desired */
+    height: 18px; /* Set height to match width */
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info h2{
+        font-size: 20px;
+    }
+    .container text-center p{
+    font-size: 12px;
+    white-space: pre-wrap;
+    }
+    .consent-label {
+        flex-wrap: wrap;
+    }
+}
+
+/* Футер */
+footer {
+    background-color: #f8f9fa; /* Светлый фон */
+    font-size: 14px;
+}
+.container text-center p{
+    font-size: 14px;
+}
+.footer-link {
+    color: #404040; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 5px;
+    transition: color 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.footer-link:hover {
+    color: #EA9478; /* Цвет при наведении */
+}
