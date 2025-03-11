@@ -367,14 +367,19 @@ nav.menu a:hover {
 
 h3 {
     font-family: 'Great Vibes', cursive;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 46px;
     margin-left: 2%;
+    margin-bottom:2%;
 }
 h2 {
     font-family: 'M PLUS 1p', sans-serif;
     font-weight: 700;
     font-size: 20px;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
 }
 .top-margin-100 {
     margin-top: 100px !important;
