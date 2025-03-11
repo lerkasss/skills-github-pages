@@ -8,6 +8,7 @@ function toggleDropdown(event) {
     toggleVisibility(dropdown, event.target);
 }
 
+
 function toggleMobileDropdown(event) {
     event.preventDefault(); // Prevent default behavior
     const dropdown = document.getElementById('mobileLanguageDropdown');
@@ -37,28 +38,6 @@ document.addEventListener('click', function (event) {
 
 
 
-// Open modal
-function openModal() {
-    console.log("openModal working");
-    const modal = document.getElementById('modal');
-    modal.style.display = 'block';
-}
-
-// Close modal
-function closeModal() {
-    console.log("closeModal working");
-    const modal = document.getElementById('modal');
-    modal.style.display = 'none';
-}
-
-// Close modal if user clicks outside the modal content
-window.onclick = function(event) {
-    console.log("Modal working");
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-};
 //reviews
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".reviews-container");
@@ -103,12 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(smoothScroll);
 });
 
-// Update file name display after file selection
-function updateFileName() {
-    const fileInput = document.getElementById('document');
-    const fileName = document.getElementById('fileName');
-    fileName.textContent = fileInput.files[0] ? fileInput.files[0].name : 'No file chosen';
-}
+
 
 // Toggle the mobile menu visibility when burger icon is clicked
 document.querySelector('.burger-menu').addEventListener('click', toggleBurgerMenu);
@@ -129,11 +103,3 @@ document.querySelectorAll('.mobile-menu a').forEach(item => {
         document.querySelector('.mobile-menu').classList.remove('active');
     });
 });
-
-
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent default form submission
-    alert("Thank you for contacting us! We'll get back to you shortly.");
-    this.reset(); // Clear the form fields
-});
-
